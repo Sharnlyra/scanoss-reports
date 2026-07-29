@@ -1,0 +1,23 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:4ddd8f52-8c37-4e3f-b9a1-d3082ac16d5c",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-29T07:08:01Z",
+    "tools": [
+      {
+        "vendor": "SCANOSS",
+        "name": "scanoss-py",
+        "version": "1.54.2"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "NOASSERTION",
+      "version": "NOASSERTION"
+    }
+  },
+  "components": [],
+  "vulnerabilities": []
+}
