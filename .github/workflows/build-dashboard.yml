@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>SCANOSS Scan Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #262b36;
+    --text: #e6e8ec;
+    --muted: #8b94a3;
+    --accent: #5b8def;
+    --danger: #e35d5d;
+    --warn: #e3b25d;
+    --ok: #5de394;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 32px;
+  }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); margin-bottom: 28px; font-size: 14px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .card .value { font-size: 28px; font-weight: 600; margin-top: 6px; }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .panel h2 { font-size: 15px; margin: 0 0 16px 0; color: var(--text); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; }
+  .sev-critical, .sev-high { color: var(--danger); }
+  .sev-medium { color: var(--warn); }
+  .sev-low, .sev-unknown { color: var(--muted); }
+  select {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  .row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .empty { color: var(--muted); font-size: 13px; padding: 20px 0; }
+</style>
+</head>
+<body>
+
+  <h1>SCANOSS Scan Dashboard</h1>
+  <div class="subtitle">Component, vulnerability, license, and snippet-match history across commits</div>
+
+  <div class="grid" id="summary-cards"></div>
+
+  <div class="panel">
+    <h2>Trend across commits</h2>
+    <canvas id="trendChart" height="80"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="row">
+      <h2 style="margin:0;">Commit detail</h2>
+      <select id="commitSelect"></select>
+    </div>
+    <table id="componentTable">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Version</th>
+          <th>License(s)</th>
+          <th>Vulnerabilities</th>
+          <th>Snippet match %</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="empty" id="emptyState" style="display:none;">No component data for this commit.</div>
+  </div>
+
+<script>
+async function loadHistory() {
+  try {
+    const res = await fetch('history.json');
+    return await res.json();
+  } catch (e) {
+    console.error('Failed to load history.json', e);
+    return [];
+  }
+}
+
+function renderCards(history) {
+  const container = document.getElementById('summary-cards');
+  if (!history.length) {
+    container.innerHTML = '<div class="empty">No scan history yet.</div>';
+    return;
+  }
+  const latest = history[history.length - 1].summary;
+  const cards = [
+    { label: 'Components (latest)', value: latest.component_count },
+    { label: 'Vulnerabilities (latest)', value: latest.vulnerability_count },
+    { label: 'Avg snippet match %', value: latest.avg_snippet_match_pct + '%' },
+    { label: 'Commits tracked', value: history.length },
+  ];
+  container.innerHTML = cards.map(c => `
+    <div class="card">
+      <div class="label">${c.label}</div>
+      <div class="value">${c.value}</div>
+    </div>
+  `).join('');
+}
+
+function renderTrendChart(history) {
+  const ctx = document.getElementById('trendChart');
+  const labels = history.map(h => (h.commit || '').slice(0, 7));
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Components',
+          data: history.map(h => h.summary.component_count),
+          borderColor: '#5b8def',
+          backgroundColor: 'transparent',
+          tension: 0.3,
+        },
+        {
+          label: 'Vulnerabilities',
+          data: history.map(h => h.summary.vulnerability_count),
+          borderColor: '#e35d5d',
+          backgroundColor: 'transparent',
+          tension: 0.3,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { color: '#e6e8ec' } } },
+      scales: {
+        x: { ticks: { color: '#8b94a3' }, grid: { color: '#262b36' } },
+        y: { ticks: { color: '#8b94a3' }, grid: { color: '#262b36' } },
+      },
+    },
+  });
+}
+
+function renderCommitSelector(history) {
+  const select = document.getElementById('commitSelect');
+  select.innerHTML = history.map((h, i) => `
+    <option value="${i}">${(h.commit || '').slice(0, 7)} - ${h.branch || ''} - ${h.timestamp || ''}</option>
+  `).reverse().join('');
+  select.addEventListener('change', () => renderComponentTable(history[select.value]));
+  if (history.length) renderComponentTable(history[history.length - 1]);
+}
+
+function renderComponentTable(entry) {
+  const tbody = document.querySelector('#componentTable tbody');
+  const emptyState = document.getElementById('emptyState');
+  const components = (entry && entry.summary && entry.summary.components) || [];
+
+  if (!components.length) {
+    tbody.innerHTML = '';
+    emptyState.style.display = 'block';
+    return;
+  }
+  emptyState.style.display = 'none';
+
+  tbody.innerHTML = components.map(c => {
+    const vulnList = (c.vulnerabilities || []).map(v =>
+      `<span class="sev-${(v.severity || 'unknown').toLowerCase()}">${v.id} (${v.severity})</span>`
+    ).join(', ') || '—';
+    return `
+      <tr>
+        <td>${c.component}</td>
+        <td>${c.version}</td>
+        <td>${(c.licenses || []).join(', ') || '—'}</td>
+        <td>${vulnList}</td>
+        <td>${c.max_match_pct}%</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+(async function init() {
+  const history = await loadHistory();
+  renderCards(history);
+  if (history.length) renderTrendChart(history);
+  renderCommitSelector(history);
+})();
+</script>
+
+</body>
+</html>
