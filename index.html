@@ -2,103 +2,259 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>SCANOSS Scan Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SCA Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
   :root {
-    --bg: #0f1115;
-    --panel: #171a21;
-    --border: #262b36;
-    --text: #e6e8ec;
-    --muted: #8b94a3;
-    --accent: #5b8def;
-    --danger: #e35d5d;
-    --warn: #e3b25d;
-    --ok: #5de394;
+    --bg: #0d1117;
+    --panel: #151b23;
+    --panel-hover: #1b2229;
+    --border: #262d38;
+    --text: #e6edf3;
+    --muted: #7d8590;
+    --accent: #2dd4bf;
+    --accent-dim: rgba(45, 212, 191, 0.12);
+    --crit: #f85149;
+    --high: #fb8b24;
+    --med: #e3b341;
+    --low: #58a6ff;
+    --sidebar-w: 220px;
   }
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    padding: 32px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    display: flex;
+    min-height: 100vh;
   }
-  h1 { font-size: 22px; margin-bottom: 4px; }
-  .subtitle { color: var(--muted); margin-bottom: 28px; font-size: 14px; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 28px;
+  h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  .sidebar {
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    padding: 20px 14px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
   }
-  .card {
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px 20px 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+  .logo-mark {
+    width: 22px; height: 22px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--accent), #1a7f74);
+    flex-shrink: 0;
+  }
+  .logo-text { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2px;
+  }
+  .nav-item:hover { background: var(--panel-hover); color: var(--text); }
+  .nav-item.active { background: var(--accent-dim); color: var(--accent); }
+  .nav-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.6; }
+
+  .main { flex: 1; padding: 28px 36px; max-width: 1200px; }
+  .topline { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; }
+  .topline h1 { font-size: 22px; font-weight: 600; }
+  .topline .subtitle { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .breadcrumb { color: var(--muted); font-size: 12.5px; margin-bottom: 6px; }
+  .breadcrumb .crumb-link { color: var(--accent); cursor: pointer; }
+
+  .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+  .metric-card {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 18px;
+    padding: 16px 18px;
   }
-  .card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
-  .card .value { font-size: 28px; font-weight: 600; margin-top: 6px; }
+  .metric-card .m-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
+  .metric-card .m-value { font-size: 26px; font-weight: 700; margin-top: 6px; font-family: 'Space Grotesk', sans-serif; }
+  .metric-card.crit .m-value { color: var(--crit); }
+  .metric-card.warn .m-value { color: var(--high); }
+
   .panel {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
-  .panel h2 { font-size: 15px; margin: 0 0 16px 0; color: var(--text); }
+  .panel-title { font-size: 14px; font-weight: 600; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 500; }
-  .sev-critical, .sev-high { color: var(--danger); }
-  .sev-medium { color: var(--warn); }
-  .sev-low, .sev-unknown { color: var(--muted); }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr.clickable { cursor: pointer; }
+  tr.clickable:hover td { background: var(--panel-hover); }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .chip.crit { background: rgba(248,81,73,0.15); color: var(--crit); }
+  .chip.high { background: rgba(251,139,36,0.15); color: var(--high); }
+  .chip.medium { background: rgba(227,179,65,0.15); color: var(--med); }
+  .chip.low, .chip.unknown { background: rgba(88,166,255,0.12); color: var(--low); }
+  .chip.license { background: rgba(45,212,191,0.12); color: var(--accent); }
+
+  .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+  .tab-btn {
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    background: none;
+    border-top: none; border-left: none; border-right: none;
+    font-family: inherit;
+  }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .empty-state { color: var(--muted); font-size: 13px; padding: 28px 0; text-align: center; }
   select {
-    background: var(--panel);
+    background: var(--bg);
     color: var(--text);
     border: 1px solid var(--border);
     border-radius: 6px;
     padding: 6px 10px;
-    font-size: 13px;
+    font-size: 12.5px;
+    font-family: inherit;
   }
-  .row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-  .empty { color: var(--muted); font-size: 13px; padding: 20px 0; }
 </style>
 </head>
 <body>
 
-  <h1>SCANOSS Scan Dashboard</h1>
-  <div class="subtitle">Component, vulnerability, license, and snippet-match history across commits</div>
-
-  <div class="grid" id="summary-cards"></div>
-
-  <div class="panel">
-    <h2>Trend across commits</h2>
-    <canvas id="trendChart" height="80"></canvas>
+<div class="sidebar">
+  <div class="logo">
+    <div class="logo-mark"></div>
+    <div class="logo-text">SCA Portfolio</div>
   </div>
+  <div class="nav-item active" data-view="portfolio"><span class="nav-dot"></span> Portfolio</div>
+  <div class="nav-item" data-view="portfolio"><span class="nav-dot"></span> Projects</div>
+</div>
 
-  <div class="panel">
-    <div class="row">
-      <h2 style="margin:0;">Commit detail</h2>
-      <select id="commitSelect"></select>
+<div class="main">
+
+  <div id="view-portfolio">
+    <div class="topline">
+      <div>
+        <h1>Portfolio</h1>
+        <div class="subtitle">Component, vulnerability, and license risk across every tracked project</div>
+      </div>
     </div>
-    <table id="componentTable">
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Version</th>
-          <th>License(s)</th>
-          <th>Vulnerabilities</th>
-          <th>Snippet match %</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <div class="empty" id="emptyState" style="display:none;">No component data for this commit.</div>
+
+    <div class="metrics-row" id="portfolio-metrics"></div>
+
+    <div class="panel">
+      <div class="panel-title">Projects</div>
+      <table id="projects-table">
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Latest commit</th>
+            <th>Components</th>
+            <th>Vulnerabilities</th>
+            <th>Risk</th>
+            <th>Last scanned</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="empty-state" id="portfolio-empty" style="display:none;">No scans recorded yet. Push a commit to trigger the first scan.</div>
+    </div>
   </div>
+
+  <div id="view-project" style="display:none;">
+    <div class="breadcrumb"><span class="crumb-link" id="back-to-portfolio">Portfolio</span> / <span id="project-name-crumb"></span></div>
+    <div class="topline">
+      <div>
+        <h1 id="project-title"></h1>
+        <div class="subtitle" id="project-subtitle"></div>
+      </div>
+      <select id="commit-select"></select>
+    </div>
+
+    <div class="metrics-row" id="project-metrics"></div>
+
+    <div class="panel">
+      <div class="panel-title">Scan history</div>
+      <canvas id="trendChart" height="70"></canvas>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="components">Components</button>
+      <button class="tab-btn" data-tab="vulnerabilities">Vulnerabilities</button>
+      <button class="tab-btn" data-tab="licenses">Licenses</button>
+      <button class="tab-btn" data-tab="snippets">Snippet matching</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-components">
+      <table>
+        <thead><tr><th>Component</th><th>Version</th><th>License(s)</th><th>Snippet match</th></tr></thead>
+        <tbody id="components-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="tab-panel" id="tab-vulnerabilities">
+      <table>
+        <thead><tr><th>CVE</th><th>Severity</th><th>Component</th><th>Version</th></tr></thead>
+        <tbody id="vulns-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="tab-panel" id="tab-licenses">
+      <table>
+        <thead><tr><th>License</th><th>Component count</th></tr></thead>
+        <tbody id="licenses-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="tab-panel" id="tab-snippets">
+      <table>
+        <thead><tr><th>Component</th><th>Version</th><th>Match %</th></tr></thead>
+        <tbody id="snippets-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
 
 <script>
+let HISTORY = [];
+let PROJECTS = {};
+let trendChartInstance = null;
+
 async function loadHistory() {
   try {
     const res = await fetch('history.json');
@@ -109,104 +265,206 @@ async function loadHistory() {
   }
 }
 
-function renderCards(history) {
-  const container = document.getElementById('summary-cards');
-  if (!history.length) {
-    container.innerHTML = '<div class="empty">No scan history yet.</div>';
-    return;
-  }
-  const latest = history[history.length - 1].summary;
+function groupByProject(history) {
+  const groups = {};
+  history.forEach(entry => {
+    const key = entry.repo || 'unknown';
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(entry);
+  });
+  Object.values(groups).forEach(arr => arr.sort((a, b) => (a.timestamp || '').localeCompare(b.timestamp || '')));
+  return groups;
+}
+
+function riskScore(summary) {
+  if (!summary) return 0;
+  const sev = summary.severity_counts || {};
+  const weights = { critical: 10, high: 5, medium: 2, low: 1, unknown: 1 };
+  return Object.entries(sev).reduce((acc, [k, v]) => acc + (weights[k.toLowerCase()] || 1) * v, 0);
+}
+
+function riskLabel(score) {
+  if (score === 0) return { text: 'None', cls: 'low' };
+  if (score < 10) return { text: 'Low', cls: 'low' };
+  if (score < 30) return { text: 'Medium', cls: 'medium' };
+  return { text: 'High', cls: 'crit' };
+}
+
+function renderPortfolioMetrics(history, groups) {
+  const totalProjects = Object.keys(groups).length;
+  const latestPerProject = Object.values(groups).map(arr => arr[arr.length - 1]);
+  const totalVulns = latestPerProject.reduce((a, e) => a + (e.summary?.vulnerability_count || 0), 0);
+  const projectsAtRisk = latestPerProject.filter(e => (e.summary?.vulnerability_count || 0) > 0).length;
+  const totalComponents = latestPerProject.reduce((a, e) => a + (e.summary?.component_count || 0), 0);
+
   const cards = [
-    { label: 'Components (latest)', value: latest.component_count },
-    { label: 'Vulnerabilities (latest)', value: latest.vulnerability_count },
-    { label: 'Avg snippet match %', value: latest.avg_snippet_match_pct + '%' },
-    { label: 'Commits tracked', value: history.length },
+    { label: 'Projects', value: totalProjects, cls: '' },
+    { label: 'Portfolio vulnerabilities', value: totalVulns, cls: totalVulns > 0 ? 'crit' : '' },
+    { label: 'Projects at risk', value: projectsAtRisk, cls: projectsAtRisk > 0 ? 'warn' : '' },
+    { label: 'Tracked components', value: totalComponents, cls: '' },
   ];
-  container.innerHTML = cards.map(c => `
-    <div class="card">
-      <div class="label">${c.label}</div>
-      <div class="value">${c.value}</div>
+  document.getElementById('portfolio-metrics').innerHTML = cards.map(c => `
+    <div class="metric-card ${c.cls}">
+      <div class="m-label">${c.label}</div>
+      <div class="m-value">${c.value}</div>
     </div>
   `).join('');
 }
 
-function renderTrendChart(history) {
+function renderProjectsTable(groups) {
+  const tbody = document.querySelector('#projects-table tbody');
+  const entries = Object.entries(groups);
+  if (!entries.length) {
+    document.getElementById('portfolio-empty').style.display = 'block';
+    tbody.innerHTML = '';
+    return;
+  }
+  document.getElementById('portfolio-empty').style.display = 'none';
+
+  tbody.innerHTML = entries.map(([repo, arr]) => {
+    const latest = arr[arr.length - 1];
+    const s = latest.summary || {};
+    const risk = riskLabel(riskScore(s));
+    return `
+      <tr class="clickable" data-repo="${repo}">
+        <td>${repo}</td>
+        <td class="mono">${(latest.commit || '').slice(0, 7)}</td>
+        <td>${s.component_count ?? 0}</td>
+        <td>${s.vulnerability_count ?? 0}</td>
+        <td><span class="chip ${risk.cls}">${risk.text}</span></td>
+        <td>${latest.timestamp || '—'}</td>
+      </tr>
+    `;
+  }).join('');
+
+  tbody.querySelectorAll('tr.clickable').forEach(row => {
+    row.addEventListener('click', () => openProject(row.dataset.repo));
+  });
+}
+
+function openProject(repo) {
+  document.getElementById('view-portfolio').style.display = 'none';
+  document.getElementById('view-project').style.display = 'block';
+  document.getElementById('project-name-crumb').textContent = repo;
+  document.getElementById('project-title').textContent = repo;
+
+  const arr = PROJECTS[repo];
+  document.getElementById('project-subtitle').textContent = `${arr.length} commit${arr.length !== 1 ? 's' : ''} scanned`;
+
+  const select = document.getElementById('commit-select');
+  select.innerHTML = arr.map((e, i) => `<option value="${i}">${(e.commit || '').slice(0,7)} — ${e.branch || ''} — ${e.timestamp || ''}</option>`).reverse().join('');
+  select.onchange = () => renderProjectDetail(repo, arr[select.value]);
+
+  renderTrendChart(arr);
+  renderProjectDetail(repo, arr[arr.length - 1]);
+}
+
+function renderTrendChart(arr) {
   const ctx = document.getElementById('trendChart');
-  const labels = history.map(h => (h.commit || '').slice(0, 7));
-  new Chart(ctx, {
+  if (trendChartInstance) trendChartInstance.destroy();
+  trendChartInstance = new Chart(ctx, {
     type: 'line',
     data: {
-      labels,
+      labels: arr.map(e => (e.commit || '').slice(0, 7)),
       datasets: [
-        {
-          label: 'Components',
-          data: history.map(h => h.summary.component_count),
-          borderColor: '#5b8def',
-          backgroundColor: 'transparent',
-          tension: 0.3,
-        },
-        {
-          label: 'Vulnerabilities',
-          data: history.map(h => h.summary.vulnerability_count),
-          borderColor: '#e35d5d',
-          backgroundColor: 'transparent',
-          tension: 0.3,
-        },
+        { label: 'Components', data: arr.map(e => e.summary?.component_count || 0), borderColor: '#2dd4bf', backgroundColor: 'transparent', tension: 0.3 },
+        { label: 'Vulnerabilities', data: arr.map(e => e.summary?.vulnerability_count || 0), borderColor: '#f85149', backgroundColor: 'transparent', tension: 0.3 },
       ],
     },
     options: {
       responsive: true,
-      plugins: { legend: { labels: { color: '#e6e8ec' } } },
+      plugins: { legend: { labels: { color: '#e6edf3' } } },
       scales: {
-        x: { ticks: { color: '#8b94a3' }, grid: { color: '#262b36' } },
-        y: { ticks: { color: '#8b94a3' }, grid: { color: '#262b36' } },
+        x: { ticks: { color: '#7d8590' }, grid: { color: '#262d38' } },
+        y: { ticks: { color: '#7d8590' }, grid: { color: '#262d38' } },
       },
     },
   });
 }
 
-function renderCommitSelector(history) {
-  const select = document.getElementById('commitSelect');
-  select.innerHTML = history.map((h, i) => `
-    <option value="${i}">${(h.commit || '').slice(0, 7)} - ${h.branch || ''} - ${h.timestamp || ''}</option>
-  `).reverse().join('');
-  select.addEventListener('change', () => renderComponentTable(history[select.value]));
-  if (history.length) renderComponentTable(history[history.length - 1]);
+function renderProjectDetail(repo, entry) {
+  const s = (entry && entry.summary) || {};
+  const components = s.components || [];
+
+  const risk = riskLabel(riskScore(s));
+  const cards = [
+    { label: 'Components', value: s.component_count ?? 0 },
+    { label: 'Vulnerabilities', value: s.vulnerability_count ?? 0, cls: (s.vulnerability_count || 0) > 0 ? 'crit' : '' },
+    { label: 'Avg snippet match', value: (s.avg_snippet_match_pct ?? 0) + '%' },
+    { label: 'Risk level', value: risk.text, cls: risk.cls === 'crit' ? 'crit' : (risk.cls === 'medium' ? 'warn' : '') },
+  ];
+  document.getElementById('project-metrics').innerHTML = cards.map(c => `
+    <div class="metric-card ${c.cls || ''}">
+      <div class="m-label">${c.label}</div>
+      <div class="m-value">${c.value}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('components-tbody').innerHTML = components.length ? components.map(c => `
+    <tr>
+      <td>${c.component}</td>
+      <td class="mono">${c.version}</td>
+      <td>${(c.licenses || []).map(l => `<span class="chip license">${l}</span>`).join(' ') || '—'}</td>
+      <td>${c.max_match_pct ?? 0}%</td>
+    </tr>
+  `).join('') : `<tr><td colspan="4" class="empty-state">No components recorded for this commit.</td></tr>`;
+
+  const vulnRows = [];
+  components.forEach(c => {
+    (c.vulnerabilities || []).forEach(v => {
+      vulnRows.push({ id: v.id, severity: v.severity, component: c.component, version: c.version });
+    });
+  });
+  document.getElementById('vulns-tbody').innerHTML = vulnRows.length ? vulnRows.map(v => `
+    <tr>
+      <td class="mono">${v.id}</td>
+      <td><span class="chip ${(v.severity || 'unknown').toLowerCase()}">${v.severity}</span></td>
+      <td>${v.component}</td>
+      <td class="mono">${v.version}</td>
+    </tr>
+  `).join('') : `<tr><td colspan="4" class="empty-state">No known vulnerabilities for this commit.</td></tr>`;
+
+  const licenseCounts = s.license_counts || {};
+  const licRows = Object.entries(licenseCounts);
+  document.getElementById('licenses-tbody').innerHTML = licRows.length ? licRows.map(([lic, count]) => `
+    <tr><td><span class="chip license">${lic}</span></td><td>${count}</td></tr>
+  `).join('') : `<tr><td colspan="2" class="empty-state">No license data for this commit.</td></tr>`;
+
+  document.getElementById('snippets-tbody').innerHTML = components.length ? components
+    .slice().sort((a, b) => (b.max_match_pct || 0) - (a.max_match_pct || 0))
+    .map(c => `<tr><td>${c.component}</td><td class="mono">${c.version}</td><td>${c.max_match_pct ?? 0}%</td></tr>`)
+    .join('') : `<tr><td colspan="3" class="empty-state">No snippet-match data for this commit.</td></tr>`;
 }
 
-function renderComponentTable(entry) {
-  const tbody = document.querySelector('#componentTable tbody');
-  const emptyState = document.getElementById('emptyState');
-  const components = (entry && entry.summary && entry.summary.components) || [];
-
-  if (!components.length) {
-    tbody.innerHTML = '';
-    emptyState.style.display = 'block';
-    return;
-  }
-  emptyState.style.display = 'none';
-
-  tbody.innerHTML = components.map(c => {
-    const vulnList = (c.vulnerabilities || []).map(v =>
-      `<span class="sev-${(v.severity || 'unknown').toLowerCase()}">${v.id} (${v.severity})</span>`
-    ).join(', ') || '—';
-    return `
-      <tr>
-        <td>${c.component}</td>
-        <td>${c.version}</td>
-        <td>${(c.licenses || []).join(', ') || '—'}</td>
-        <td>${vulnList}</td>
-        <td>${c.max_match_pct}%</td>
-      </tr>
-    `;
-  }).join('');
+function setupTabs() {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
 }
+
+document.getElementById('back-to-portfolio').addEventListener('click', () => {
+  document.getElementById('view-project').style.display = 'none';
+  document.getElementById('view-portfolio').style.display = 'block';
+});
+
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.getElementById('view-project').style.display = 'none';
+    document.getElementById('view-portfolio').style.display = 'block';
+  });
+});
 
 (async function init() {
-  const history = await loadHistory();
-  renderCards(history);
-  if (history.length) renderTrendChart(history);
-  renderCommitSelector(history);
+  setupTabs();
+  HISTORY = await loadHistory();
+  PROJECTS = groupByProject(HISTORY);
+  renderPortfolioMetrics(HISTORY, PROJECTS);
+  renderProjectsTable(PROJECTS);
 })();
 </script>
 
