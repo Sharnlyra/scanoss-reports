@@ -1,0 +1,3472 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:96869899-76a4-463f-a9ac-2b75274f590e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-30T08:01:41Z",
+    "tools": [
+      {
+        "vendor": "SCANOSS",
+        "name": "scanoss-py",
+        "version": "1.54.2"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "NOASSERTION",
+      "version": "NOASSERTION"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "github.com/corvusoft/openssl-dependency",
+      "publisher": "",
+      "version": "v0.0.0-20250528083339-3423c30db3aa",
+      "purl": "pkg:golang/github.com/corvusoft/openssl-dependency",
+      "bom-ref": "pkg:golang/github.com/corvusoft/openssl-dependency",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-1.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "Artistic-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-1.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mpv-toolchain",
+      "publisher": "eko5624",
+      "version": "toolchain",
+      "purl": "pkg:github/eko5624/mpv-toolchain",
+      "bom-ref": "pkg:github/eko5624/mpv-toolchain",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 WITH LLVM-exception"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "Zlib"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "curl"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "git.openssl.org/openssl.git",
+      "publisher": "",
+      "version": "v0.0.0-20221222100207-5a8fcd27bb1b",
+      "purl": "pkg:golang/git.openssl.org/openssl.git",
+      "bom-ref": "pkg:golang/git.openssl.org/openssl.git",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-1.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "Artistic-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-1.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "openssl",
+      "version": "3.3-POST-CLANG-FORMAT-WEBKIT",
+      "purl": "pkg:github/openssl/openssl",
+      "bom-ref": "pkg:github/openssl/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:openssl:openssl:3.6.3:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "library",
+      "name": "github.com/openssl/openssl",
+      "publisher": "golang",
+      "version": "v0.0.0-20260603074603-d23670f3af91",
+      "purl": "pkg:golang/github.com/openssl/openssl",
+      "bom-ref": "pkg:golang/github.com/openssl/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-1.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "Artistic-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-1.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/kassane/openssl-zig",
+      "publisher": "",
+      "version": "v0.0.0-20240716180029-724d6ed89b5b",
+      "purl": "pkg:golang/github.com/kassane/openssl-zig",
+      "bom-ref": "pkg:golang/github.com/kassane/openssl-zig",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mxlib",
+      "publisher": "mxmauro",
+      "version": "v2.1.2",
+      "purl": "pkg:github/mxmauro/mxlib",
+      "bom-ref": "pkg:github/mxmauro/mxlib",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "github.com/quictls/openssl",
+      "publisher": "",
+      "version": "v0.0.0-20240130153626-62ecad537806",
+      "purl": "pkg:golang/github.com/quictls/openssl",
+      "bom-ref": "pkg:golang/github.com/quictls/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-1.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "Artistic-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-1.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "warcraftiii_dll_126-xxx",
+      "publisher": "unrealkaraulov",
+      "version": "d8ba434",
+      "purl": "pkg:github/unrealkaraulov/warcraftiii_dll_126-xxx",
+      "bom-ref": "pkg:github/unrealkaraulov/warcraftiii_dll_126-xxx",
+      "licenses": [
+        {
+          "license": {
+            "id": "Unlicense"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "src",
+      "publisher": "opnsense",
+      "version": "26.7.b",
+      "purl": "pkg:github/opnsense/src",
+      "bom-ref": "pkg:github/opnsense/src",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0 WITH Linux-syscall-note"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        },
+        {
+          "license": {
+            "name": "Apache-2.0 WITH LLVM-exception"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssls",
+      "publisher": "MrE-Fog",
+      "version": "fbi",
+      "purl": "pkg:github/mre-fog/openssls",
+      "bom-ref": "pkg:github/mre-fog/openssls",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "Snowdreams01",
+      "version": "b632daa",
+      "purl": "pkg:gitee/snowdreams01/openssl",
+      "bom-ref": "pkg:gitee/snowdreams01/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "virtualbox-org-svn-vbox-trunk",
+      "publisher": "mdaniel",
+      "version": "d6f793a",
+      "purl": "pkg:github/mdaniel/virtualbox-org-svn-vbox-trunk",
+      "bom-ref": "pkg:github/mdaniel/virtualbox-org-svn-vbox-trunk",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "openssl-src",
+      "publisher": "crates.io",
+      "version": "400.0.0+4.0.1",
+      "purl": "pkg:cargo/openssl-src",
+      "bom-ref": "pkg:cargo/openssl-src",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl-sftcd-fork",
+      "publisher": "Neimhin",
+      "version": "DissertationSubmission",
+      "purl": "pkg:github/neimhin/openssl-sftcd-fork",
+      "bom-ref": "pkg:github/neimhin/openssl-sftcd-fork",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "bilibili",
+      "version": "before_engine",
+      "purl": "pkg:github/bilibili/openssl",
+      "bom-ref": "pkg:github/bilibili/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "SpaceChainOS",
+      "publisher": "spacechain",
+      "version": "f9496ed",
+      "purl": "pkg:github/spacechain/spacechainos",
+      "bom-ref": "pkg:github/spacechain/spacechainos",
+      "licenses": [
+        {
+          "license": {
+            "id": "OpenSSL"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "rhuijben",
+      "version": "e6855e1",
+      "purl": "pkg:github/rhuijben/openssl",
+      "bom-ref": "pkg:github/rhuijben/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "apexdc",
+      "publisher": "apexdc",
+      "version": "1.6.5.source",
+      "purl": "pkg:sourceforge/apexdc",
+      "bom-ref": "pkg:sourceforge/apexdc",
+      "licenses": [
+        {
+          "license": {
+            "id": "OpenSSL"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "hexchills",
+      "version": "926c698",
+      "purl": "pkg:codeberg/hexchills/openssl",
+      "bom-ref": "pkg:codeberg/hexchills/openssl",
+      "licenses": [
+        {
+          "license": {
+            "name": "bcrypt-Solar-Designer"
+          }
+        },
+        {
+          "license": {
+            "name": "OpenSSL-standalone"
+          }
+        },
+        {
+          "license": {
+            "id": "OpenSSL"
+          }
+        },
+        {
+          "license": {
+            "id": "MS-PL"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-4-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "Gutmann"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        },
+        {
+          "license": {
+            "name": "Ferguson-Twofish"
+          }
+        },
+        {
+          "license": {
+            "name": "SSLeay-standalone"
+          }
+        },
+        {
+          "license": {
+            "id": "RSA-MD"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "packages-ssl",
+      "publisher": "SWI-Prolog",
+      "version": "V5.4.0",
+      "purl": "pkg:github/swi-prolog/packages-ssl",
+      "bom-ref": "pkg:github/swi-prolog/packages-ssl",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "openssl3-win-build",
+      "publisher": "kiyolee",
+      "version": "v3.6.0",
+      "purl": "pkg:github/kiyolee/openssl3-win-build",
+      "bom-ref": "pkg:github/kiyolee/openssl3-win-build",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        },
+        {
+          "license": {
+            "id": "MS-PL"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "Ferguson-Twofish"
+          }
+        },
+        {
+          "license": {
+            "name": "SSLeay-standalone"
+          }
+        },
+        {
+          "license": {
+            "id": "RSA-MD"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libcurl-devel",
+      "publisher": "negrutiu",
+      "version": "v2024.4.28",
+      "purl": "pkg:github/negrutiu/libcurl-devel",
+      "bom-ref": "pkg:github/negrutiu/libcurl-devel",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "nopodofo",
+      "publisher": "Cory Mickelson",
+      "version": "0.1.0",
+      "purl": "pkg:npm/nopodofo",
+      "bom-ref": "pkg:npm/nopodofo",
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/shogo82148/openssl",
+      "publisher": "",
+      "version": "v0.0.0-20221104123144-f5a10d5cc192",
+      "purl": "pkg:golang/github.com/shogo82148/openssl",
+      "bom-ref": "pkg:golang/github.com/shogo82148/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-1.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "Artistic-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-1.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/cpacia/go-libtor",
+      "publisher": "",
+      "version": "v1.0.138-0.20191212053219-8e4305ea6496",
+      "purl": "pkg:golang/github.com/cpacia/go-libtor",
+      "bom-ref": "pkg:golang/github.com/cpacia/go-libtor",
+      "licenses": [
+        {
+          "license": {
+            "id": "OpenSSL"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "ISC"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rtems-libbsd",
+      "publisher": "rtems",
+      "version": "cf2d821",
+      "purl": "pkg:github/rtems/rtems-libbsd",
+      "bom-ref": "pkg:github/rtems/rtems-libbsd",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "libopenssl-dev",
+      "publisher": "DreamConnected",
+      "version": "2025-05-09",
+      "purl": "pkg:github/dreamconnected/libopenssl-dev",
+      "bom-ref": "pkg:github/dreamconnected/libopenssl-dev",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "quictls",
+      "publisher": "quictls",
+      "version": "e3980e0",
+      "purl": "pkg:github/quictls/quictls",
+      "bom-ref": "pkg:github/quictls/quictls",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "experimental",
+      "publisher": "openssl",
+      "version": "8c2e588",
+      "purl": "pkg:github/openssl/experimental",
+      "bom-ref": "pkg:github/openssl/experimental",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/ooni/go-libtor",
+      "publisher": "",
+      "version": "v1.1.5",
+      "purl": "pkg:golang/github.com/ooni/go-libtor",
+      "bom-ref": "pkg:golang/github.com/ooni/go-libtor",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "amissl",
+      "publisher": "jens-maus",
+      "version": "5.7",
+      "purl": "pkg:github/jens-maus/amissl",
+      "bom-ref": "pkg:github/jens-maus/amissl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "miniblink132",
+      "publisher": "weolar",
+      "version": "191f82c",
+      "purl": "pkg:github/weolar/miniblink132",
+      "bom-ref": "pkg:github/weolar/miniblink132",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "go-libtor",
+      "publisher": "ipsn",
+      "version": "v1.0.243",
+      "purl": "pkg:github/ipsn/go-libtor",
+      "bom-ref": "pkg:github/ipsn/go-libtor",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "gitlab-org/build/omnibus-mirror",
+      "version": "openssl-3.0.0-alpha13",
+      "purl": "pkg:gitlab/gitlab-org/build/omnibus-mirror/openssl",
+      "bom-ref": "pkg:gitlab/gitlab-org/build/omnibus-mirror/openssl",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "barrelfish",
+      "publisher": "barrelfishos",
+      "version": "release2011-11-10",
+      "purl": "pkg:github/barrelfishos/barrelfish",
+      "bom-ref": "pkg:github/barrelfishos/barrelfish",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "ibmruntimes",
+      "version": "openssl-3.0.15+CVEs2",
+      "purl": "pkg:github/ibmruntimes/openssl",
+      "bom-ref": "pkg:github/ibmruntimes/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl-ct",
+      "publisher": "greearb",
+      "version": "lf-5.4.7",
+      "purl": "pkg:github/greearb/openssl-ct",
+      "bom-ref": "pkg:github/greearb/openssl-ct",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "SSLeay-standalone"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "sailfishos-mirror",
+      "version": "openssl-3.1.0-beta1",
+      "purl": "pkg:github/sailfishos-mirror/openssl",
+      "bom-ref": "pkg:github/sailfishos-mirror/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "raspbian-packages",
+      "version": "3.0.5-2",
+      "purl": "pkg:github/raspbian-packages/openssl",
+      "bom-ref": "pkg:github/raspbian-packages/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Artistic-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "oss-httpd-build",
+      "publisher": "vmware-tanzu",
+      "version": "2.4.43-200602",
+      "purl": "pkg:github/vmware-tanzu/oss-httpd-build",
+      "bom-ref": "pkg:github/vmware-tanzu/oss-httpd-build",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "TITAN",
+      "publisher": "furryirl",
+      "version": "125.89",
+      "purl": "pkg:github/furryirl/titan",
+      "bom-ref": "pkg:github/furryirl/titan",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "reg31",
+      "version": "22811797224",
+      "purl": "pkg:github/reg31/openssl",
+      "bom-ref": "pkg:github/reg31/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "OpenPapyrus",
+      "publisher": "papyrussolution",
+      "version": "v11.5.5",
+      "purl": "pkg:github/papyrussolution/openpapyrus",
+      "bom-ref": "pkg:github/papyrussolution/openpapyrus",
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "AppleMobileDeviceLibrary",
+      "publisher": "Lakr233",
+      "version": "storage.2E4FD012-C1C4-4A9D-9FFF-F842AFCD062A",
+      "purl": "pkg:github/lakr233/applemobiledevicelibrary",
+      "bom-ref": "pkg:github/lakr233/applemobiledevicelibrary",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "THUAI6",
+      "publisher": "eesast",
+      "version": "7cedb02",
+      "purl": "pkg:github/eesast/thuai6",
+      "bom-ref": "pkg:github/eesast/thuai6",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "MCPServer.cpp",
+      "publisher": "caomengxuan666",
+      "version": "v1.0.3.0",
+      "purl": "pkg:github/caomengxuan666/mcpserver.cpp",
+      "bom-ref": "pkg:github/caomengxuan666/mcpserver.cpp",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "thuai7",
+      "publisher": "eesast",
+      "version": "d29693c",
+      "purl": "pkg:github/eesast/thuai7",
+      "bom-ref": "pkg:github/eesast/thuai7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "actions-setup-perl",
+      "publisher": "shogo82148",
+      "version": "v0.0.0",
+      "purl": "pkg:github/shogo82148/actions-setup-perl",
+      "bom-ref": "pkg:github/shogo82148/actions-setup-perl",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tools-android",
+      "publisher": "gnustep",
+      "version": "latest",
+      "purl": "pkg:github/gnustep/tools-android",
+      "bom-ref": "pkg:github/gnustep/tools-android",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cryptography",
+      "publisher": "pyca",
+      "version": "0.7",
+      "purl": "pkg:github/pyca/cryptography",
+      "bom-ref": "pkg:github/pyca/cryptography",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:cryptography.io:cryptography:0.7:*:*:*:*:python:*:*"
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "majek",
+      "version": "2f58cda",
+      "purl": "pkg:github/majek/openssl",
+      "bom-ref": "pkg:github/majek/openssl",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "turnkey-triumph-326606_openssl",
+      "publisher": "samkenxstream",
+      "version": "v3.1.1",
+      "purl": "pkg:github/samkenxstream/turnkey-triumph-326606_openssl",
+      "bom-ref": "pkg:github/samkenxstream/turnkey-triumph-326606_openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "publisher": "winlibs",
+      "version": "openssl-4.0.1",
+      "purl": "pkg:github/winlibs/openssl",
+      "bom-ref": "pkg:github/winlibs/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "skynet_fly",
+      "publisher": "huahua132",
+      "version": "5897396",
+      "purl": "pkg:github/huahua132/skynet_fly",
+      "bom-ref": "pkg:github/huahua132/skynet_fly",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dracut-rhel9",
+      "publisher": "redhat-plumbers",
+      "version": "2075755",
+      "purl": "pkg:github/redhat-plumbers/dracut-rhel9",
+      "bom-ref": "pkg:github/redhat-plumbers/dracut-rhel9",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "firefox-dynasty",
+      "publisher": "i3roly",
+      "version": "128.0",
+      "purl": "pkg:github/i3roly/firefox-dynasty",
+      "bom-ref": "pkg:github/i3roly/firefox-dynasty",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "bdec",
+      "publisher": "asdf1011",
+      "version": "bdec-0.6.0",
+      "purl": "pkg:github/asdf1011/bdec",
+      "bom-ref": "pkg:github/asdf1011/bdec",
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/akamai/openssl",
+      "publisher": "",
+      "version": "v0.0.0-20220322130815-9e1a54f4a187",
+      "purl": "pkg:golang/github.com/akamai/openssl",
+      "bom-ref": "pkg:golang/github.com/akamai/openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-1.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "Artistic-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-1.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "intel-sgx-ssl",
+      "publisher": "intel",
+      "version": "b9c7687",
+      "purl": "pkg:github/intel/intel-sgx-ssl",
+      "bom-ref": "pkg:github/intel/intel-sgx-ssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "OpenSSL"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gencmpclient",
+      "publisher": "siemens",
+      "version": "bb94de9",
+      "purl": "pkg:github/siemens/gencmpclient",
+      "bom-ref": "pkg:github/siemens/gencmpclient",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "perl-text-template",
+      "publisher": "mschout",
+      "version": "v1.56",
+      "purl": "pkg:github/mschout/perl-text-template",
+      "bom-ref": "pkg:github/mschout/perl-text-template",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "mininodejs20",
+      "publisher": "weolar_admin",
+      "version": "07e85ae",
+      "purl": "pkg:gitee/weolar_admin/mininodejs20",
+      "bom-ref": "pkg:gitee/weolar_admin/mininodejs20",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pod-weaver-section-sourcegithub",
+      "publisher": "mschout",
+      "version": "0.55",
+      "purl": "pkg:cpan/pod-weaver-section-sourcegithub",
+      "bom-ref": "pkg:cpan/pod-weaver-section-sourcegithub",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "watchman",
+      "publisher": "sdt",
+      "version": "release-0.021",
+      "purl": "pkg:github/sdt/watchman",
+      "bom-ref": "pkg:github/sdt/watchman",
+      "licenses": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2009-3765",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3765"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2009-1390",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1390"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2009-3766",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3766"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2009-3767",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3767"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-0190",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0190"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-28386",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28386"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-28387",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28387"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-28388",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28388"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-28389",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28389"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-28390",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28390"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-31789",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31789"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-31790",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31790"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-2673",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2673"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-34180",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34180"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-34181",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34181"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-34182",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34182"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-34183",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34183"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-35188",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35188"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42764",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42764"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42765",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42765"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42766",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42766"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42769",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42769"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42767",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42767"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42768",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42768"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42770",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42770"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-45445",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45445"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-45446",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45446"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-45447",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45447"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-7383",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7383"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-9076",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9076"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-6129",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6129"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-6119",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6119"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-15467",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15467"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2007-5536",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-5536"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-1292",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1292"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-2068",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2068"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-1473",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1473"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-1434",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1434"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-1343",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1343"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-2097",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2097"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-3358",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3358"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-3786",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3786"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-3602",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3602"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-3996",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3996"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-4450",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4450"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0215",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0215"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0216",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0216"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0217",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0217"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0286",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0286"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0401",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0401"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-4304",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4304"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-4203",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4203"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0464",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0465",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-0466",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-1255",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1255"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-2650",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2650"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-2975",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2975"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-3817",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3817"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4807",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4807"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5363",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5363"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5678",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5678"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-0727",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0727"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-68160",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68160"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-69418",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69418"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-69419",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69419"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-69420",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69420"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-69421",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69421"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-22795",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22795"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-22796",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22796"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-7054",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7054"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-7053",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7053"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-6309",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6309"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-3730",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3730"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-3736",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3736"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-3733",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3733"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-5407",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-5407"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-0733",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0733"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-1563",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1563"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-1552",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1552"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-1547",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1547"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-1543",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1543"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-0739",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0739"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-0737",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0737"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-3735",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3735"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-7055",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7055"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-3732",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3732"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-0734",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0734"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-0735",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0735"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-0778",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0778"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-3738",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3738"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-3731",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3731"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-0732",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0732"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-1549",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1549"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2019-1551",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1551"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-4160",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4160"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-23841",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23841"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-3712",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3712"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-3711",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3711"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-1971",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1971"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-23840",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23840"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-3449",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3449"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-42771",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42771"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-4575",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4575"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-11187",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11187"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-15468",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15468"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-15469",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15469"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-66199",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66199"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-4044",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4044"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-3446",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3446"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-6308",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6308"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-6307",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6307"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-6305",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6305"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-8610",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-8610"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-6304",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6304"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-537c-gmf6-5ccf",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-537c-gmf6-5ccf"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r6ph-v2qm-q3c2",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-r6ph-v2qm-q3c2"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x4qr-2fvf-3mr5",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-x4qr-2fvf-3mr5"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3ww4-gg4f-jr7f",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-3ww4-gg4f-jr7f"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q3cj-2r34-2cwc",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-q3cj-2r34-2cwc"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5cpq-8wj7-hf2v",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-5cpq-8wj7-hf2v"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hggm-jpg3-v476",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-hggm-jpg3-v476"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m959-cc7f-wv43",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-m959-cc7f-wv43"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-9243",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-9243"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-36242",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-36242"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-38325",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38325"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-50782",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-50782"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-26007",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26007"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-34073",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34073"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-2274",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2274"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/openssl/openssl"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v8gr-m533-ghj9",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-v8gr-m533-ghj9"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w7pp-m8wf-vj6r",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-w7pp-m8wf-vj6r"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jm77-qphf-c4w8",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-jm77-qphf-c4w8"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-23931",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23931"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/pyca/cryptography"
+        }
+      ]
+    }
+  ]
+}
