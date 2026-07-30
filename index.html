@@ -90,6 +90,18 @@
   .chip.added { background: rgba(63,185,80,0.15); color: #3fb950; }
   .chip.removed { background: rgba(248,81,73,0.15); color: var(--crit); }
   .chip.changed { background: rgba(227,179,65,0.15); color: var(--med); }
+  .chip.quantum-vulnerable { background: rgba(248,81,73,0.15); color: var(--crit); }
+  .chip.quantum-safe { background: rgba(63,185,80,0.15); color: #3fb950; }
+  .chip.review { background: rgba(227,179,65,0.15); color: var(--med); }
+
+  /* Cryptography section: scoped violet theme. Overriding --accent inside
+     this wrapper retints every element that already reads var(--accent)
+     (metric cards, license/accent chips, active nav/tab underline) without
+     duplicating CSS rules. */
+  .crypto-theme {
+    --accent: #a78bfa;
+    --accent-dim: rgba(167, 139, 250, 0.12);
+  }
 
   .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; flex-wrap: wrap; }
   .tab-btn {
@@ -137,6 +149,7 @@
   </div>
   <div class="nav-item active" data-nav="portfolio"><span class="nav-dot"></span> Portfolio</div>
   <div class="nav-item" data-nav="toprisks"><span class="nav-dot"></span> Top Risks</div>
+  <div class="nav-item" data-nav="crypto"><span class="nav-dot"></span> Cryptography</div>
 </div>
 
 <div class="main">
@@ -206,6 +219,39 @@
     </div>
   </div>
 
+  <!-- CRYPTOGRAPHY (PORTFOLIO-WIDE) -->
+  <div id="view-crypto" class="crypto-theme" style="display:none;">
+    <div class="topline">
+      <div>
+        <h1>Cryptography</h1>
+        <div class="subtitle">Cryptographic assets detected by SCANOSS Crypto Finder, across every project's latest commit</div>
+      </div>
+      <div class="toolbar">
+        <button class="btn" id="export-crypto-csv">Export CSV</button>
+      </div>
+    </div>
+    <div class="metrics-row" id="crypto-portfolio-metrics"></div>
+    <div class="panel">
+      <div class="panel-title">
+        <span>Detected assets</span>
+        <input type="text" class="search-input" id="crypto-search" placeholder="Search algorithm or project…">
+      </div>
+      <table id="crypto-table">
+        <thead>
+          <tr>
+            <th data-key="name">Asset <span class="sort-arrow"></span></th>
+            <th data-key="primitive">Primitive <span class="sort-arrow"></span></th>
+            <th data-key="project">Project <span class="sort-arrow"></span></th>
+            <th data-key="risk">Quantum risk <span class="sort-arrow"></span></th>
+            <th data-key="occurrences">Occurrences <span class="sort-arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="empty-state" id="crypto-empty" style="display:none;">No cryptographic assets recorded yet. Confirm the Crypto Finder step is producing cbom.json.</div>
+    </div>
+  </div>
+
   <!-- PROJECT DETAIL -->
   <div id="view-project" style="display:none;">
     <div class="breadcrumb"><span class="crumb-link" id="back-to-portfolio">Portfolio</span> / <span id="project-name-crumb"></span></div>
@@ -232,6 +278,7 @@
       <button class="tab-btn" data-tab="vulnerabilities">Vulnerabilities</button>
       <button class="tab-btn" data-tab="licenses">Licenses</button>
       <button class="tab-btn" data-tab="snippets">Snippet matching</button>
+      <button class="tab-btn" data-tab="crypto">Cryptography</button>
       <button class="tab-btn" data-tab="diff">Compare commits</button>
     </div>
 
@@ -301,6 +348,25 @@
         </tr></thead>
         <tbody id="snippets-tbody"></tbody>
       </table>
+    </div>
+
+    <div class="tab-panel" id="tab-crypto">
+      <div class="crypto-theme">
+        <div class="panel-title">
+          <input type="text" class="search-input" id="crypto-project-search" placeholder="Search algorithm…">
+          <button class="btn" id="export-crypto-project-csv">Export CSV</button>
+        </div>
+        <table>
+          <thead><tr>
+            <th data-key="name">Asset <span class="sort-arrow"></span></th>
+            <th data-key="primitive">Primitive <span class="sort-arrow"></span></th>
+            <th data-key="family">Algorithm family</th>
+            <th data-key="risk">Quantum risk <span class="sort-arrow"></span></th>
+            <th data-key="location">Location</th>
+          </tr></thead>
+          <tbody id="crypto-project-tbody"></tbody>
+        </table>
+      </div>
     </div>
 
     <div class="tab-panel" id="tab-diff">
@@ -605,6 +671,7 @@ function renderProjectDetail(entry) {
   renderVulnsTab();
   renderLicensesTab();
   renderSnippetsTab();
+  renderCryptoProjectTab();
 }
 
 function renderComponentsTab() {
@@ -734,11 +801,104 @@ function runDiff() {
   `;
 }
 
+/* ---------- Cryptography (portfolio-wide) ---------- */
+
+let cryptoFilter = '';
+let cryptoSort = { key: 'name', dir: 1 };
+
+function getAllLatestCryptoAssets() {
+  const rows = [];
+  Object.entries(PROJECTS).forEach(([repo, arr]) => {
+    const latest = arr[arr.length - 1];
+    (latest.crypto?.assets || []).forEach(a => {
+      rows.push({
+        name: a.name, primitive: a.primitive, project: repo,
+        risk: a.quantum_risk, occurrences: (a.occurrences || []).length,
+      });
+    });
+  });
+  return rows;
+}
+
+function renderCryptoPortfolioMetrics() {
+  const rows = getAllLatestCryptoAssets();
+  const projectsWithCrypto = new Set(rows.map(r => r.project)).size;
+  const vulnerable = rows.filter(r => r.risk === 'quantum-vulnerable').length;
+  const safe = rows.filter(r => r.risk === 'quantum-safe').length;
+  const cards = [
+    { label: 'Crypto assets', value: rows.length },
+    { label: 'Quantum-vulnerable', value: vulnerable, cls: vulnerable > 0 ? 'crit' : '' },
+    { label: 'Post-quantum-ready', value: safe },
+    { label: 'Projects with findings', value: projectsWithCrypto },
+  ];
+  document.getElementById('crypto-portfolio-metrics').innerHTML = cards.map(c => `
+    <div class="metric-card ${c.cls||''}"><div class="m-label">${c.label}</div><div class="m-value">${c.value}</div></div>
+  `).join('');
+}
+
+function renderCryptoPortfolioTable() {
+  let rows = getAllLatestCryptoAssets();
+  if (cryptoFilter) rows = rows.filter(r => r.name.toLowerCase().includes(cryptoFilter) || r.project.toLowerCase().includes(cryptoFilter));
+  const { key, dir } = cryptoSort;
+  rows.sort((a, b) => typeof a[key] === 'number' ? (a[key]-b[key])*dir : String(a[key]).localeCompare(String(b[key]))*dir);
+
+  const tbody = document.querySelector('#crypto-table tbody');
+  if (!rows.length) {
+    document.getElementById('crypto-empty').style.display = 'block';
+    tbody.innerHTML = '';
+    return;
+  }
+  document.getElementById('crypto-empty').style.display = 'none';
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td>${r.name}</td>
+      <td>${r.primitive}</td>
+      <td>${r.project}</td>
+      <td><span class="chip ${r.risk}">${r.risk}</span></td>
+      <td>${r.occurrences}</td>
+    </tr>
+  `).join('');
+}
+
+function renderCryptoPortfolio() {
+  renderCryptoPortfolioMetrics();
+  renderCryptoPortfolioTable();
+}
+
+/* ---------- Cryptography (per-project tab) ---------- */
+
+let cryptoProjectFilter = '';
+let cryptoProjectSort = { key: 'name', dir: 1 };
+
+function renderCryptoProjectTab() {
+  const assets = currentEntry?.crypto?.assets || [];
+  let rows = assets.filter(a => a.name.toLowerCase().includes(cryptoProjectFilter));
+  const { key, dir } = cryptoProjectSort;
+  rows = rows.slice().sort((a, b) => {
+    if (key === 'primitive') return String(a.primitive||'').localeCompare(String(b.primitive||'')) * dir;
+    if (key === 'risk') return String(a.quantum_risk||'').localeCompare(String(b.quantum_risk||'')) * dir;
+    return String(a.name).localeCompare(String(b.name)) * dir;
+  });
+
+  document.getElementById('crypto-project-tbody').innerHTML = rows.length ? rows.map(a => {
+    const loc = (a.occurrences || []).map(o => `${o.file}${o.line ? ':' + o.line : ''}`).join(', ') || '—';
+    return `
+      <tr>
+        <td>${a.name}</td>
+        <td>${a.primitive}</td>
+        <td>${a.algorithm_family || '—'}</td>
+        <td><span class="chip ${a.quantum_risk}">${a.quantum_risk}</span></td>
+        <td class="mono">${loc}</td>
+      </tr>`;
+  }).join('') : `<tr><td colspan="5" class="empty-state">No cryptographic assets recorded for this commit.</td></tr>`;
+}
+
 /* ---------- Nav / tabs wiring ---------- */
 
 function switchNav(view) {
   document.getElementById('view-portfolio').style.display = view === 'portfolio' ? 'block' : 'none';
   document.getElementById('view-toprisks').style.display = view === 'toprisks' ? 'block' : 'none';
+  document.getElementById('view-crypto').style.display = view === 'crypto' ? 'block' : 'none';
   document.getElementById('view-project').style.display = view === 'project' ? 'block' : 'none';
   document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.nav === view));
 }
@@ -762,6 +922,7 @@ function setupTabs() {
   renderPortfolioMetrics(PROJECTS);
   renderProjectsTable();
   renderTopRisks();
+  renderCryptoPortfolio();
 
   document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', () => switchNav(item.dataset.nav));
@@ -775,6 +936,12 @@ function setupTabs() {
   attachSort('#toprisks-table', 'toprisks', (key, dir) => { topRisksSort = { key, dir }; renderTopRisks(); });
   document.getElementById('export-toprisks-csv').addEventListener('click', () => {
     downloadCSV('top-risks.csv', getAllLatestComponents(), ['component','version','project','license','vulns','score']);
+  });
+
+  attachSearch('crypto-search', v => { cryptoFilter = v; renderCryptoPortfolioTable(); });
+  attachSort('#crypto-table', 'crypto', (key, dir) => { cryptoSort = { key, dir }; renderCryptoPortfolioTable(); });
+  document.getElementById('export-crypto-csv').addEventListener('click', () => {
+    downloadCSV('crypto-assets.csv', getAllLatestCryptoAssets(), ['name','primitive','project','risk','occurrences']);
   });
 
   attachSearch('components-search', v => { filters.components = v; renderComponentsTab(); });
@@ -805,6 +972,16 @@ function setupTabs() {
   document.getElementById('export-snippets-csv').addEventListener('click', () => {
     const rows = (currentEntry?.summary?.components||[]).map(c => ({ component: c.component, version: c.version, match: c.max_match_pct }));
     downloadCSV(`${currentRepo}-snippet-matches.csv`, rows, ['component','version','match']);
+  });
+
+  attachSearch('crypto-project-search', v => { cryptoProjectFilter = v; renderCryptoProjectTab(); });
+  attachSort('#tab-crypto table', 'crypto-project', (key, dir) => { cryptoProjectSort = { key, dir }; renderCryptoProjectTab(); });
+  document.getElementById('export-crypto-project-csv').addEventListener('click', () => {
+    const rows = (currentEntry?.crypto?.assets||[]).map(a => ({
+      name: a.name, primitive: a.primitive, family: a.algorithm_family, risk: a.quantum_risk,
+      location: (a.occurrences||[]).map(o => `${o.file}${o.line ? ':' + o.line : ''}`).join('; '),
+    }));
+    downloadCSV(`${currentRepo}-crypto-assets.csv`, rows, ['name','primitive','family','risk','location']);
   });
 
   document.getElementById('run-diff-btn').addEventListener('click', runDiff);
