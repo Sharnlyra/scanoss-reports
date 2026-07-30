@@ -1,15 +1,17 @@
 """
 summarize_reports.py
 
-Walks reports/<repo>/<sha>/results.json + meta.json produced by the
-scan workflow, and builds a single history.json file consumed by the
-static dashboard (dashboard.html).
+Walks reports/<repo>/<sha>/results.json + meta.json (+ optional cbom.json)
+produced by the scan workflow, and builds a single history.json file
+consumed by the static dashboard (dashboard.html).
 
-NOTE: scanoss-py's results.json structure can evolve between versions.
-This script defensively handles a few common shapes. If your installed
-scanoss-py version emits different field names, adjust the
-`extract_summary()` function below -- run one scan locally and inspect
-results.json to confirm exact keys before relying on this in production.
+NOTE: scanoss-py's results.json structure, and SCANOSS Crypto Finder's
+CBOM structure, can evolve between versions. This script defensively
+handles the commonly documented shapes for each. If your installed
+tool versions emit different field names, adjust extract_summary()
+(for results.json) or extract_crypto_summary() (for cbom.json) below --
+run one scan locally and inspect the raw files to confirm exact keys
+before relying on this in production.
 
 Usage:
     python summarize_reports.py --reports-dir reports --output history.json
@@ -126,7 +128,92 @@ def extract_summary(results):
     }
 
 
-def main():
+def extract_crypto_summary(cbom):
+    """
+    Reduce a SCANOSS Crypto Finder CycloneDX CBOM into a flat summary:
+      - list of crypto assets (name, primitive, algorithm family, key size,
+        quantum risk level, file locations)
+      - aggregate counts by primitive and by quantum-risk category
+
+    CBOM structure (CycloneDX 1.6 cryptographic-asset components):
+      {
+        "type": "cryptographic-asset",
+        "name": "RSA-PKCS1-1.5-SHA-256-2048",
+        "evidence": {"occurrences": [{"line": 51, "location": "src/File.java"}]},
+        "cryptoProperties": {
+          "assetType": "algorithm",
+          "algorithmProperties": {
+            "primitive": "signature",
+            "algorithmFamily": "RSASSA-PKCS1",
+            "parameterSetIdentifier": "2048",
+            "nistQuantumSecurityLevel": 0
+          }
+        }
+      }
+
+    nistQuantumSecurityLevel of 0 means quantum-vulnerable (per the CBOM
+    spec). Assets missing this field fall back to a name-based heuristic.
+    """
+    QUANTUM_VULNERABLE_HINTS = ["rsa", "dsa", "dh", "ecdh", "ecdsa", "diffie-hellman", "elliptic"]
+    POST_QUANTUM_HINTS = ["kyber", "dilithium", "sphincs", "falcon", "ml-kem", "ml-dsa"]
+
+    assets = []
+    components = cbom.get("components", []) if isinstance(cbom, dict) else []
+
+    for comp in components:
+        if comp.get("type") != "cryptographic-asset":
+            continue
+
+        crypto_props = comp.get("cryptoProperties", {}) or {}
+        algo_props = crypto_props.get("algorithmProperties", {}) or {}
+
+        name = comp.get("name", "unknown")
+        primitive = algo_props.get("primitive", crypto_props.get("assetType", "unknown"))
+        algorithm_family = algo_props.get("algorithmFamily", "")
+        param_size = algo_props.get("parameterSetIdentifier", "")
+
+        nist_level = algo_props.get("nistQuantumSecurityLevel")
+        name_lower = name.lower()
+        if nist_level is not None:
+            risk = "quantum-vulnerable" if nist_level == 0 else "quantum-safe"
+        elif any(h in name_lower for h in POST_QUANTUM_HINTS):
+            risk = "quantum-safe"
+        elif any(h in name_lower for h in QUANTUM_VULNERABLE_HINTS):
+            risk = "quantum-vulnerable"
+        else:
+            risk = "review"
+
+        occurrences = []
+        for occ in (comp.get("evidence", {}) or {}).get("occurrences", []):
+            occurrences.append({
+                "file": occ.get("location", "unknown"),
+                "line": occ.get("line"),
+            })
+
+        assets.append({
+            "name": name,
+            "primitive": primitive,
+            "algorithm_family": algorithm_family,
+            "parameter_size": param_size,
+            "quantum_risk": risk,
+            "occurrences": occurrences,
+        })
+
+    primitive_counts = {}
+    risk_counts = {}
+    for a in assets:
+        primitive_counts[a["primitive"]] = primitive_counts.get(a["primitive"], 0) + 1
+        risk_counts[a["quantum_risk"]] = risk_counts.get(a["quantum_risk"], 0) + 1
+
+    return {
+        "asset_count": len(assets),
+        "primitive_counts": primitive_counts,
+        "risk_counts": risk_counts,
+        "assets": assets,
+    }
+
+
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--reports-dir", default="reports")
     parser.add_argument("--output", default="history.json")
@@ -141,7 +228,7 @@ def main():
             json.dump(history, f, indent=2)
         return
 
-    # Structure: reports/<org>/<repo>/<sha>/{results.json,meta.json}
+    # Structure: reports/<org>/<repo>/<sha>/{results.json,meta.json,cbom.json?}
     for meta_path in reports_root.glob("*/*/*/meta.json"):
         commit_dir = meta_path.parent
         results_path = commit_dir / "results.json"
@@ -152,7 +239,19 @@ def main():
         results = load_json(results_path)
         summary = extract_summary(results)
 
-        history.append({**meta, "summary": summary})
+        cbom_path = commit_dir / "cbom.json"
+        crypto_summary = None
+        if cbom_path.exists():
+            try:
+                cbom = load_json(cbom_path)
+                crypto_summary = extract_crypto_summary(cbom)
+            except (json.JSONDecodeError, OSError) as e:
+                print(f"Warning: could not parse {cbom_path}: {e}")
+
+        entry = {**meta, "summary": summary}
+        if crypto_summary is not None:
+            entry["crypto"] = crypto_summary
+        history.append(entry)
 
     history.sort(key=lambda entry: entry.get("timestamp", ""))
 
