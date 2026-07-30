@@ -213,7 +213,7 @@ def extract_crypto_summary(cbom):
     }
 
 
-
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--reports-dir", default="reports")
     parser.add_argument("--output", default="history.json")
