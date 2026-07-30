@@ -4017,10 +4017,3733 @@
       ]
     },
     "crypto": {
-      "asset_count": 0,
-      "primitive_counts": {},
-      "risk_counts": {},
-      "assets": []
+      "asset_count": 33,
+      "primitive_counts": {
+        "block-cipher": 3,
+        "key-agree": 4,
+        "signature": 8,
+        "kdf": 3,
+        "mac": 1,
+        "hash": 7,
+        "kem": 2,
+        "drbg": 1,
+        "stream-cipher": 1,
+        "pke": 1,
+        "xof": 1,
+        "related-crypto-material": 1
+      },
+      "risk_counts": {
+        "review": 22,
+        "quantum-vulnerable": 8,
+        "quantum-safe": 3
+      },
+      "assets": [
+        {
+          "name": "3DES",
+          "primitive": "block-cipher",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkcs12.c",
+              "line": 507
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 41
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 46
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 49
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cms\\cms_denc.c",
+              "line": 64
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cms\\cms_enc.c",
+              "line": 63
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\smime\\smenc.c",
+              "line": 62
+            }
+          ]
+        },
+        {
+          "name": "AES--",
+          "primitive": "block-cipher",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\cms.c",
+              "line": 971
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkcs12.c",
+              "line": 225
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkcs8.c",
+              "line": 173
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkcs8.c",
+              "line": 190
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkcs8.c",
+              "line": 231
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 308
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\smime.c",
+              "line": 506
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 136
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 137
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 138
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 141
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 142
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 143
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 147
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 148
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 155
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 156
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 157
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 160
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 161
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 162
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 166
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 173
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 174
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 175
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 178
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 179
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 180
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 184
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 185
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rand\\rand_lib.c",
+              "line": 623
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cipher\\aesccm.c",
+              "line": 93
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cipher\\aesccm.c",
+              "line": 177
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cipher\\aesgcm.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cipher\\aesgcm.c",
+              "line": 167
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\encode\\ec_encode.c",
+              "line": 149
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\encode\\rsa_encode.c",
+              "line": 146
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\cmac-aes256.c",
+              "line": 115
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\gmac.c",
+              "line": 90
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\poly1305.c",
+              "line": 118
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\poly1305.c",
+              "line": 132
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_gcm_siv_hw.c",
+              "line": 41
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_gcm_siv_hw.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_gcm_siv_hw.c",
+              "line": 47
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_siv_hw.c",
+              "line": 35
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_siv_hw.c",
+              "line": 36
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_siv_hw.c",
+              "line": 39
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_siv_hw.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_siv_hw.c",
+              "line": 43
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_siv_hw.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\srtpkdf.c",
+              "line": 235
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\srtpkdf.c",
+              "line": 236
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\srtpkdf.c",
+              "line": 237
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_port.c",
+              "line": 211
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_port.c",
+              "line": 213
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 194
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 207
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_srtm.c",
+              "line": 123
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_tls.c",
+              "line": 161
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_tls.c",
+              "line": 163
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_wire_pkt.c",
+              "line": 25
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_wire_pkt.c",
+              "line": 28
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_wire_pkt.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_wire_pkt.c",
+              "line": 51
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_wire_pkt.c",
+              "line": 923
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_wire_pkt.c",
+              "line": 933
+            }
+          ]
+        },
+        {
+          "name": "DES",
+          "primitive": "block-cipher",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\rand_key.c",
+              "line": 25
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\set_key.c",
+              "line": 770
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\str2key.c",
+              "line": 42
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\str2key.c",
+              "line": 46
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\str2key.c",
+              "line": 80
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\str2key.c",
+              "line": 81
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\str2key.c",
+              "line": 87
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\str2key.c",
+              "line": 88
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 21
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 29
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 37
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_allc.c",
+              "line": 45
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\mdc2\\mdc2dgst.c",
+              "line": 94
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\mdc2\\mdc2dgst.c",
+              "line": 98
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_des.c",
+              "line": 126
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_des_hw.c",
+              "line": 59
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_tdes_common.c",
+              "line": 145
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_tdes_common.c",
+              "line": 147
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_tdes_common.c",
+              "line": 149
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\krb5kdf.c",
+              "line": 247
+            }
+          ]
+        },
+        {
+          "name": "DH",
+          "primitive": "key-agree",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 191
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 197
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 251
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 284
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 317
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_env.c",
+              "line": 140
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_env.c",
+              "line": 1385
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_ameth.c",
+              "line": 337
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_ameth.c",
+              "line": 350
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_ameth.c",
+              "line": 565
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_ameth.c",
+              "line": 611
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_asn1.c",
+              "line": 31
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_asn1.c",
+              "line": 101
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_asn1.c",
+              "line": 116
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_backend.c",
+              "line": 113
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_backend.c",
+              "line": 232
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_depr.c",
+              "line": 31
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_key.c",
+              "line": 426
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_lib.c",
+              "line": 121
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_lib.c",
+              "line": 148
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dsa\\dsa_lib.c",
+              "line": 51
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\decoder.c",
+              "line": 66
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1240
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1241
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1242
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1243
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 145
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 146
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\dh_kmgmt.c",
+              "line": 481
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\dh_kmgmt.c",
+              "line": 500
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\dh_kmgmt.c",
+              "line": 841
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\dh_kmgmt.c",
+              "line": 930
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\s3_lib.c",
+              "line": 5508
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 333
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 1659
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_conf.c",
+              "line": 626
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 4545
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 5126
+            }
+          ]
+        },
+        {
+          "name": "DSA",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 191
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 197
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dhparam.c",
+              "line": 309
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dsa.c",
+              "line": 192
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dsaparam.c",
+              "line": 154
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dsaparam.c",
+              "line": 191
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dsaparam.c",
+              "line": 193
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dsaparam.c",
+              "line": 235
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\gendsa.c",
+              "line": 124
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\gendsa.c",
+              "line": 148
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 245
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 808
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 663
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 678
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\testdsa.h",
+              "line": 1464
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\x509.c",
+              "line": 1147
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_env.c",
+              "line": 1389
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 274
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dsa\\dsa_ameth.c",
+              "line": 542
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dsa\\dsa_lib.c",
+              "line": 193
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dsa\\dsa_lib.c",
+              "line": 221
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 577
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs7\\pk7_lib.c",
+              "line": 378
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_DSA_keygen.c",
+              "line": 30
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_DSA_paramfromdata.c",
+              "line": 49
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_DSA_paramgen.c",
+              "line": 30
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_DSA_paramvalidate.c",
+              "line": 76
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\EVP_DSA_Signature_demo.c",
+              "line": 37
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1250
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1251
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1252
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1253
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 147
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 148
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 149
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\storemgmt\\file_store_any2obj.c",
+              "line": 216
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\storemgmt\\file_store_any2obj.c",
+              "line": 284
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 328
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 3913
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 4410
+            }
+          ]
+        },
+        {
+          "name": "ECDH",
+          "primitive": "key-agree",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ecparam.c",
+              "line": 235
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ecparam.c",
+              "line": 245
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkey.c",
+              "line": 252
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_ec.c",
+              "line": 33
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_ec.c",
+              "line": 49
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_env.c",
+              "line": 142
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_env.c",
+              "line": 1391
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 274
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_ameth.c",
+              "line": 642
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_check.c",
+              "line": 104
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_key.c",
+              "line": 249
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_key.c",
+              "line": 343
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_key.c",
+              "line": 436
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_key.c",
+              "line": 563
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_key.c",
+              "line": 618
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdh_ossl.c",
+              "line": 99
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 220
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 526
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\encode_decode\\decoder_pkey.c",
+              "line": 382
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\evp_lib.c",
+              "line": 1030
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke.c",
+              "line": 110
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke.c",
+              "line": 1333
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 65
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 67
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 69
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs7\\pk7_lib.c",
+              "line": 378
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_crypt.c",
+              "line": 198
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_crypt.c",
+              "line": 200
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_crypt.c",
+              "line": 371
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 295
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 413
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x509_cmp.c",
+              "line": 443
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\encode\\ec_encode.c",
+              "line": 46
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\keyexch\\ecdh.c",
+              "line": 56
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\keyexch\\ecdh.c",
+              "line": 82
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_EC_keygen.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\EVP_EC_Signature_demo.c",
+              "line": 57
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 351
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1256
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1257
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1258
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1259
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 150
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 151
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\mlx_kmgmt.c",
+              "line": 48
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\mlx_kmgmt.c",
+              "line": 49
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 1916
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 1977
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 4246
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 4412
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 5132
+            }
+          ]
+        },
+        {
+          "name": "ECDSA",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ecparam.c",
+              "line": 235
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ecparam.c",
+              "line": 245
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkey.c",
+              "line": 252
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_ec.c",
+              "line": 33
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_ec.c",
+              "line": 49
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_env.c",
+              "line": 142
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_env.c",
+              "line": 1391
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 274
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_ameth.c",
+              "line": 642
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_asn1.c",
+              "line": 1226
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ec_asn1.c",
+              "line": 1333
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 90
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 123
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 298
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 426
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 429
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdsa_ossl.c",
+              "line": 432
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecp_s390x_nistp.c",
+              "line": 182
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\encode_decode\\decoder_pkey.c",
+              "line": 382
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\evp_lib.c",
+              "line": 1030
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke.c",
+              "line": 110
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke.c",
+              "line": 1333
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 65
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 67
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 69
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs7\\pk7_lib.c",
+              "line": 378
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 328
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 335
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 393
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 505
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 531
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 536
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sm2\\sm2_sign.c",
+              "line": 541
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x509_cmp.c",
+              "line": 443
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\encode\\ec_encode.c",
+              "line": 46
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\keyexch\\ecdh.c",
+              "line": 56
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\keyexch\\ecdh.c",
+              "line": 82
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_EC_keygen.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\EVP_EC_Signature_demo.c",
+              "line": 57
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 351
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1256
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1257
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1258
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1259
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 150
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 151
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\mlx_kmgmt.c",
+              "line": 48
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\mlx_kmgmt.c",
+              "line": 49
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 1916
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 1977
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 4246
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 4412
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 5132
+            }
+          ]
+        },
+        {
+          "name": "Ed",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\eddsa_sig.c",
+              "line": 733
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\eddsa_sig.c",
+              "line": 740
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\eddsa_sig.c",
+              "line": 767
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\eddsa_sig.c",
+              "line": 774
+            }
+          ]
+        },
+        {
+          "name": "EdDSA",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 251
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 254
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 793
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 794
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 373
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 381
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecx_meth.c",
+              "line": 616
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecx_meth.c",
+              "line": 669
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\EVP_ED_Signature_demo.c",
+              "line": 139
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\EVP_ED_Signature_demo.c",
+              "line": 153
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1265
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1266
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1267
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1268
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\encode_key2text.c",
+              "line": 407
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\encode_key2text.c",
+              "line": 410
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\eddsa_sig.c",
+              "line": 815
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\eddsa_sig.c",
+              "line": 822
+            }
+          ]
+        },
+        {
+          "name": "HKDF",
+          "primitive": "kdf",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\kdf.c",
+              "line": 146
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_kemri.c",
+              "line": 204
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\deterministic_nonce.c",
+              "line": 140
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_kdf.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdh_kdf.c",
+              "line": 34
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\p5_crpt.c",
+              "line": 85
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\p5_crpt2.c",
+              "line": 46
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\pbe_scrypt.c",
+              "line": 67
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke.c",
+              "line": 707
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke.c",
+              "line": 1280
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 399
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 832
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_key.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\argon2.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\hkdf.c",
+              "line": 60
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\pbkdf2.c",
+              "line": 74
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\scrypt.c",
+              "line": 76
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\fips\\self_test_kats.c",
+              "line": 270
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 59
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 81
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 187
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 208
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 215
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 236
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kem\\ec_kem.c",
+              "line": 131
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kem\\ec_kem.c",
+              "line": 396
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kem\\ecx_kem.c",
+              "line": 101
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kem\\ecx_kem.c",
+              "line": 348
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ech\\ech_internal.c",
+              "line": 954
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 38
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls13_enc.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls13_enc.c",
+              "line": 186
+            }
+          ]
+        },
+        {
+          "name": "HMAC",
+          "primitive": "mac",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dgst.c",
+              "line": 95
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\fipsinstall.c",
+              "line": 595
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 884
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\mac.c",
+              "line": 156
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\crmf\\crmf_pbm.c",
+              "line": 199
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\mac_lib.c",
+              "line": 261
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hmac\\hmac.c",
+              "line": 115
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hmac\\hmac.c",
+              "line": 261
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\modes\\siv128.c",
+              "line": 194
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_mutl.c",
+              "line": 289
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rand\\rand_lib.c",
+              "line": 638
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_pk1.c",
+              "line": 320
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_pk1.c",
+              "line": 326
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_dsa_key.c",
+              "line": 53
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\cmac-aes256.c",
+              "line": 124
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\gmac.c",
+              "line": 75
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\hmac-sha512.c",
+              "line": 205
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\poly1305.c",
+              "line": 104
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\siphash.c",
+              "line": 63
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\provider_util.c",
+              "line": 187
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\fips\\self_test.c",
+              "line": 230
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\fips\\self_test_kats.c",
+              "line": 932
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\argon2.c",
+              "line": 1028
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\hmacdrbg_kdf.c",
+              "line": 237
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\ikev2kdf.c",
+              "line": 576
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\ikev2kdf.c",
+              "line": 631
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\kdfs\\ikev2kdf.c",
+              "line": 716
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\rands\\drbg_hmac.c",
+              "line": 447
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\rands\\drbg_hmac.c",
+              "line": 480
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\mac_legacy_sig.c",
+              "line": 74
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\mac_legacy_sig.c",
+              "line": 84
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\mac_legacy_sig.c",
+              "line": 103
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\mac_legacy_sig.c",
+              "line": 119
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\mac_legacy_sig.c",
+              "line": 267
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\mac_legacy_sig.c",
+              "line": 314
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_srt_gen.c",
+              "line": 31
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\tls13_meth.c",
+              "line": 45
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\tls1_meth.c",
+              "line": 65
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\statem\\extensions_srvr.c",
+              "line": 1047
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\statem\\extensions_srvr.c",
+              "line": 2182
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls13_enc.c",
+              "line": 310
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls_depr.c",
+              "line": 38
+            }
+          ]
+        },
+        {
+          "name": "MD4",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "128",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 20
+            }
+          ]
+        },
+        {
+          "name": "MD5",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "128",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 816
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 383
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 383
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 398
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 398
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 422
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 422
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\spkac.c",
+              "line": 75
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 23
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 24
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_lib.c",
+              "line": 388
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_lib.c",
+              "line": 475
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x509_r2x.c",
+              "line": 59
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\ssl3_cbc.c",
+              "line": 170
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 1810
+            }
+          ]
+        },
+        {
+          "name": "ML-DSA-",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-safe",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 352
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 359
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 366
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_dsa\\ml_dsa_params.c",
+              "line": 45
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_dsa\\ml_dsa_params.c",
+              "line": 60
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_dsa\\ml_dsa_params.c",
+              "line": 75
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-dsa.c",
+              "line": 112
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-dsa.c",
+              "line": 116
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-dsa.c",
+              "line": 120
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-dsa.c",
+              "line": 130
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 36
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 38
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1319
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1320
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1321
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1322
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1323
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1324
+            }
+          ]
+        },
+        {
+          "name": "ML-KEM",
+          "primitive": "kem",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-safe",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_trce.c",
+              "line": 560
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_trce.c",
+              "line": 561
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_trce.c",
+              "line": 562
+            }
+          ]
+        },
+        {
+          "name": "ML-KEM-",
+          "primitive": "kem",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-safe",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_kem\\ml_kem.c",
+              "line": 134
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_kem\\ml_kem.c",
+              "line": 149
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_kem\\ml_kem.c",
+              "line": 164
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-kem.c",
+              "line": 93
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-kem.c",
+              "line": 97
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-kem.c",
+              "line": 101
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-kem.c",
+              "line": 111
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1277
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1278
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1279
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1280
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1281
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1282
+            }
+          ]
+        },
+        {
+          "name": "OpenSSL-RAND",
+          "primitive": "drbg",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 849
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 805
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ts.c",
+              "line": 579
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\asn1\\p5_scrypt.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\asn1\\p5_scrypt.c",
+              "line": 181
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\bio\\bf_nbio.c",
+              "line": 90
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\bio\\bf_nbio.c",
+              "line": 127
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\bn\\bn_local.h",
+              "line": 178
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\des\\rand_key.c",
+              "line": 22
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ocsp\\ocsp_ext.c",
+              "line": 261
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_lib.c",
+              "line": 382
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rand\\randfile.c",
+              "line": 201
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\srp\\srp_vfy.c",
+              "line": 580
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-dsa.c",
+              "line": 201
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-kem.c",
+              "line": 169
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\ml-kem.c",
+              "line": 292
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\slh-dsa.c",
+              "line": 224
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\slh-dsa.c",
+              "line": 225
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\fuzz\\slh-dsa.c",
+              "line": 226
+            }
+          ]
+        },
+        {
+          "name": "PBKDF2",
+          "primitive": "kdf",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\enc.c",
+              "line": 123
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\kdf.c",
+              "line": 146
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_kemri.c",
+              "line": 204
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\deterministic_nonce.c",
+              "line": 140
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_kdf.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdh_kdf.c",
+              "line": 34
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\p5_crpt.c",
+              "line": 85
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\p5_crpt2.c",
+              "line": 46
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\pbe_scrypt.c",
+              "line": 67
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 399
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 832
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_key.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_mutl.c",
+              "line": 77
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_mutl.c",
+              "line": 160
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\argon2.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\hkdf.c",
+              "line": 60
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\pbkdf2.c",
+              "line": 74
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\scrypt.c",
+              "line": 76
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 59
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 187
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 215
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 38
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls13_enc.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls13_enc.c",
+              "line": 186
+            }
+          ]
+        },
+        {
+          "name": "RC4",
+          "primitive": "stream-cipher",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 905
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 907
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 917
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 1097
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 1102
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\tls_common.c",
+              "line": 1327
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 515
+            }
+          ]
+        },
+        {
+          "name": "RSA-PKCS1",
+          "primitive": "pke",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 1632
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 1632
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_RSA_keygen.c",
+              "line": 42
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_RSA_keygen.c",
+              "line": 42
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_RSA_keygen.c",
+              "line": 113
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_RSA_keygen.c",
+              "line": 113
+            }
+          ]
+        },
+        {
+          "name": "RSA-PSS",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 242
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 662
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 671
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 1011
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\req.c",
+              "line": 1645
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\rsa.c",
+              "line": 265
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\x509.c",
+              "line": 1140
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\asn1\\a_verify.c",
+              "line": 150
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_rsa.c",
+              "line": 100
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_rsa.c",
+              "line": 263
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 276
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\core_namemap.c",
+              "line": 506
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\core_namemap.c",
+              "line": 508
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs7\\pk7_lib.c",
+              "line": 643
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_ameth.c",
+              "line": 313
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_ameth.c",
+              "line": 576
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_ameth.c",
+              "line": 579
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_ameth.c",
+              "line": 582
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_ameth.c",
+              "line": 1023
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_lib.c",
+              "line": 950
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_lib.c",
+              "line": 990
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_lib.c",
+              "line": 1261
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_lib.c",
+              "line": 1284
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_lib.c",
+              "line": 1344
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\rsa_pss_direct.c",
+              "line": 77
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\rsa_pss_direct.c",
+              "line": 162
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1315
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1316
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 3910
+            }
+          ]
+        },
+        {
+          "name": "SHA-",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dgst.c",
+              "line": 373
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dgst.c",
+              "line": 431
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\enc.c",
+              "line": 418
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 540
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 544
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 38
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 39
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 41
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_mutl.c",
+              "line": 370
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_mutl.c",
+              "line": 472
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_etm_hw.c",
+              "line": 143
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_etm_hw.c",
+              "line": 152
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_etm_hw.c",
+              "line": 157
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 436
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 452
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 461
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 691
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 700
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 705
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 734
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha256_hw.c",
+              "line": 785
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha512_etm_hw.c",
+              "line": 159
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha512_etm_hw.c",
+              "line": 168
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha512_etm_hw.c",
+              "line": 173
+            }
+          ]
+        },
+        {
+          "name": "SHA-1",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "160",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\crl.c",
+              "line": 109
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 817
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 884
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ocsp.c",
+              "line": 486
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ocsp.c",
+              "line": 496
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\rehash.c",
+              "line": 555
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\x509.c",
+              "line": 1178
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\x509.c",
+              "line": 1180
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\asn1\\x_algor.c",
+              "line": 149
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\asn1\\x_algor.c",
+              "line": 167
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\asn1\\x_algor.c",
+              "line": 189
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_dh.c",
+              "line": 112
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_dh.c",
+              "line": 264
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_ec.c",
+              "line": 321
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_smime.c",
+              "line": 177
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ess\\ess_lib.c",
+              "line": 78
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ess\\ess_lib.c",
+              "line": 283
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 27
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\c_alld.c",
+              "line": 28
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ffc\\ffc_params_generate.c",
+              "line": 460
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ocsp\\ocsp_lib.c",
+              "line": 30
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ocsp\\ocsp_srv.c",
+              "line": 249
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ocsp\\ocsp_srv.c",
+              "line": 293
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_crt.c",
+              "line": 70
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_oaep.c",
+              "line": 70
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\rsa\\rsa_oaep.c",
+              "line": 187
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sha\\sha1_one.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\srp\\srp_lib.c",
+              "line": 33
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\srp\\srp_lib.c",
+              "line": 160
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\srp\\srp_lib.c",
+              "line": 164
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\srp\\srp_lib.c",
+              "line": 169
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x509_cmp.c",
+              "line": 298
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x_crl.c",
+              "line": 248
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_etm_hw.c",
+              "line": 143
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_etm_hw.c",
+              "line": 152
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_etm_hw.c",
+              "line": 157
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 399
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 414
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 423
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 639
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 648
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 653
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 682
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\ciphers\\cipher_aes_cbc_hmac_sha1_hw.c",
+              "line": 734
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\rands\\drbg.c",
+              "line": 987
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\ssl3_cbc.c",
+              "line": 182
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 1813
+            }
+          ]
+        },
+        {
+          "name": "SHA-2",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\dgst.c",
+              "line": 432
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 818
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 819
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 820
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\lib\\s_cb.c",
+              "line": 821
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 614
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 621
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 647
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 664
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\passwd.c",
+              "line": 681
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\bn\\bn_rand.c",
+              "line": 336
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\bn\\bn_rand.c",
+              "line": 350
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ct\\ct_log.c",
+              "line": 86
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ct\\ct_log.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ct\\ct_sct_ctx.c",
+              "line": 220
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ct\\ct_sct_ctx.c",
+              "line": 239
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ct\\ct_vfy.c",
+              "line": 122
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ess\\ess_lib.c",
+              "line": 285
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ffc\\ffc_params_generate.c",
+              "line": 462
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ffc\\ffc_params_generate.c",
+              "line": 464
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hmac\\hmac_s390x.c",
+              "line": 25
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hmac\\hmac_s390x.c",
+              "line": 27
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hmac\\hmac_s390x.c",
+              "line": 29
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hmac\\hmac_s390x.c",
+              "line": 31
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 16
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 17
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 18
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 19
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 14
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 15
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 16
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 17
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 18
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sha\\sha1_one.c",
+              "line": 53
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sha\\sha1_one.c",
+              "line": 62
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sha\\sha1_one.c",
+              "line": 71
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\sha\\sha1_one.c",
+              "line": 80
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_dsa_key.c",
+              "line": 37
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_dsa_key.c",
+              "line": 39
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_dsa_key.c",
+              "line": 49
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ts\\ts_rsp_sign.c",
+              "line": 732
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x_all.c",
+              "line": 605
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x_all.c",
+              "line": 611
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x_all.c",
+              "line": 614
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\encrypt\\rsa_encrypt.c",
+              "line": 72
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\hkdf.c",
+              "line": 75
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\pbkdf2.c",
+              "line": 97
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_DSA_paramgen.c",
+              "line": 45
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkey\\EVP_PKEY_DSA_paramvalidate.c",
+              "line": 50
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\EVP_DSA_Signature_demo.c",
+              "line": 38
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\rsa_pss_direct.c",
+              "line": 58
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\rsa_pss_direct.c",
+              "line": 143
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\rsa_pss_hash.c",
+              "line": 63
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\rsa_pss_hash.c",
+              "line": 142
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 58
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 60
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 62
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 64
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\fips\\self_test_kats.c",
+              "line": 481
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\fips\\self_test_kats.c",
+              "line": 485
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\fips\\self_test_kats.c",
+              "line": 1026
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\lms_codecs.c",
+              "line": 150
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\rands\\drbg.c",
+              "line": 988
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\rands\\drbg.c",
+              "line": 989
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 98
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 195
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 208
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 221
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_srt_gen.c",
+              "line": 37
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\ssl3_cbc.c",
+              "line": 188
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\ssl3_cbc.c",
+              "line": 194
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\ssl3_cbc.c",
+              "line": 200
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\record\\methods\\ssl3_cbc.c",
+              "line": 208
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 1816
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\ssl_ciph.c",
+              "line": 1819
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\statem\\extensions_srvr.c",
+              "line": 1059
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\statem\\extensions_srvr.c",
+              "line": 2191
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\t1_lib.c",
+              "line": 3319
+            },
+            {
+              "file": "xz\\xz-master\\src\\xz\\list.c",
+              "line": 182
+            }
+          ]
+        },
+        {
+          "name": "SHA-3",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_kem\\ml_kem.c",
+              "line": 1648
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_kem\\ml_kem.c",
+              "line": 1649
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\digest\\BIO_f_md.c",
+              "line": 69
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\digest\\EVP_MD_demo.c",
+              "line": 154
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\digest\\EVP_MD_stdin.c",
+              "line": 58
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\mac\\hmac-sha512.c",
+              "line": 196
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\signature\\EVP_EC_Signature_demo.c",
+              "line": 204
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 66
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 68
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 70
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 72
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\rands\\drbg.c",
+              "line": 990
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\rands\\drbg.c",
+              "line": 991
+            }
+          ]
+        },
+        {
+          "name": "SHAKE",
+          "primitive": "xof",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\curve448\\eddsa.c",
+              "line": 34
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\curve448\\eddsa.c",
+              "line": 38
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\curve448\\eddsa.c",
+              "line": 76
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\curve448\\eddsa.c",
+              "line": 80
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 24
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 25
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 26
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 27
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 29
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 30
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 31
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lm_ots_params.c",
+              "line": 32
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 24
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 25
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 26
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 27
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 28
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 30
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 31
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 32
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 33
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\lms\\lms_params.c",
+              "line": 34
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_dsa\\ml_dsa_key.c",
+              "line": 85
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_dsa\\ml_dsa_key.c",
+              "line": 86
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_kem\\ml_kem.c",
+              "line": 1646
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ml_kem\\ml_kem.c",
+              "line": 1647
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_dsa_key.c",
+              "line": 37
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_dsa_key.c",
+              "line": 39
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x_all.c",
+              "line": 608
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\x509\\x_all.c",
+              "line": 614
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\digest\\EVP_MD_xof.c",
+              "line": 69
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 54
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\common\\der\\der_ml_dsa_key.c",
+              "line": 56
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\digests\\cshake_prov.c",
+              "line": 187
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\digests\\cshake_prov.c",
+              "line": 192
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\digests\\cshake_prov.c",
+              "line": 199
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\lms_codecs.c",
+              "line": 148
+            }
+          ]
+        },
+        {
+          "name": "SLH-DSA--",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "-",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 388
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 395
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 402
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 409
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 416
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 423
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 430
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 437
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 444
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 451
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 458
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_sd.c",
+              "line": 465
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 97
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 98
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 99
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 100
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 101
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 102
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 103
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 104
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 105
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 106
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 107
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\slh_dsa\\slh_params.c",
+              "line": 108
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1285
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1286
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1287
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1288
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1289
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1290
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1291
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1292
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1293
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1294
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1295
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1296
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1298
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1299
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1300
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1301
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1302
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1303
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1304
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1305
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1306
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1307
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1308
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1309
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 470
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 471
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 472
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 473
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 474
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 475
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 476
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 477
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 478
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 479
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 480
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\slh_dsa_kmgmt.c",
+              "line": 481
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 380
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 381
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 382
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 383
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 384
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 385
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 386
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 387
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 388
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 389
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 390
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\signature\\slh_dsa_sig.c",
+              "line": 391
+            }
+          ]
+        },
+        {
+          "name": "SM2",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ecparam.c",
+              "line": 231
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ecparam.c",
+              "line": 232
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\ecparam.c",
+              "line": 248
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\encode_decode\\decoder_pkey.c",
+              "line": 384
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\ec_support.c",
+              "line": 116
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 354
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1271
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1272
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1273
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 152
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_pem2der.c",
+              "line": 153
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_spki2typespki.c",
+              "line": 142
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\mlx_kmgmt.c",
+              "line": 58
+            }
+          ]
+        },
+        {
+          "name": "SM3",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "256",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\asymciphers\\sm2_enc.c",
+              "line": 79
+            }
+          ]
+        },
+        {
+          "name": "X25519",
+          "primitive": "key-agree",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecx_meth.c",
+              "line": 433
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\keyexch\\x25519.c",
+              "line": 73
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\keyexch\\x25519.c",
+              "line": 77
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\keyexch\\x25519.c",
+              "line": 130
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1261
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1262
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\encode_key2text.c",
+              "line": 401
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\ecx_exch.c",
+              "line": 104
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\mlx_kmgmt.c",
+              "line": 51
+            }
+          ]
+        },
+        {
+          "name": "X448",
+          "primitive": "key-agree",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecx_meth.c",
+              "line": 487
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1263
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\decode_der2key.c",
+              "line": 1264
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\encode_decode\\encode_key2text.c",
+              "line": 404
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\ecx_exch.c",
+              "line": 110
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\keymgmt\\mlx_kmgmt.c",
+              "line": 52
+            }
+          ]
+        },
+        {
+          "name": "private-key",
+          "primitive": "related-crypto-material",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_all.c",
+              "line": 73
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_all.c",
+              "line": 82
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_all.c",
+              "line": 113
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_all.c",
+              "line": 123
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_all.c",
+              "line": 154
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pem_all.c",
+              "line": 169
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cms\\cms_ddec.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cms\\cms_dec.c",
+              "line": 37
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cms\\cms_sign.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cms\\cms_sign2.c",
+              "line": 36
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\cms\\cms_sign2.c",
+              "line": 50
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\pkcs12\\pkwrite.c",
+              "line": 36
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\smime\\smdec.c",
+              "line": 37
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\smime\\smsign.c",
+              "line": 44
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\smime\\smsign2.c",
+              "line": 36
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\smime\\smsign2.c",
+              "line": 50
+            }
+          ]
+        },
+        {
+          "name": "scrypt",
+          "primitive": "kdf",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\kdf.c",
+              "line": 146
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\apps\\pkcs8.c",
+              "line": 75
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\asn1\\p5_scrypt.c",
+              "line": 60
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\cms\\cms_kemri.c",
+              "line": 204
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\deterministic_nonce.c",
+              "line": 140
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\dh\\dh_kdf.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\ec\\ecdh_kdf.c",
+              "line": 34
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\p5_crpt.c",
+              "line": 85
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\p5_crpt2.c",
+              "line": 46
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\evp\\pbe_scrypt.c",
+              "line": 67
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\hpke\\hpke_util.c",
+              "line": 399
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pem\\pvkfmt.c",
+              "line": 832
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\crypto\\pkcs12\\p12_key.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\argon2.c",
+              "line": 92
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\hkdf.c",
+              "line": 60
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\pbkdf2.c",
+              "line": 74
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\demos\\kdf\\scrypt.c",
+              "line": 76
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 59
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 82
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 187
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 209
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 215
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\providers\\implementations\\exchange\\kdf_exch.c",
+              "line": 237
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\quic\\quic_record_util.c",
+              "line": 38
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls13_enc.c",
+              "line": 40
+            },
+            {
+              "file": "OpenSSL\\openssl-master\\ssl\\tls13_enc.c",
+              "line": 186
+            }
+          ]
+        }
+      ]
     }
   }
 ]
