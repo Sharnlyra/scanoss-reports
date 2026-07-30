@@ -1,0 +1,3922 @@
+{
+  "INSTALL": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_20_0/INSTALL",
+      "file_hash": "d40c86f7b471e6064e959f861f3db513",
+      "file_url": "https://api.scanoss.com/file_contents/d40c86f7b471e6064e959f861f3db513",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2012-04-22",
+      "server": {
+        "elapsed": "0.139185s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "d40c86f7b471e6064e959f861f3db513",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "945dd15e1e0bad1bab412370eea71f37",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_20_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2014-9645",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2014-9645"
+        },
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2016-6301",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+        },
+        {
+          "CVE": "CVE-2013-1813",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2013-1813"
+        },
+        {
+          "CVE": "CVE-2016-2148",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+        },
+        {
+          "CVE": "CVE-2011-5325",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2011-5325"
+        },
+        {
+          "CVE": "CVE-2016-2147",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+        },
+        {
+          "CVE": "CVE-2018-1000517",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2017-16544",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+        },
+        {
+          "CVE": "CVE-2015-9261",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2015-9261"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "Makefile.custom": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_29_0/Makefile.custom",
+      "file_hash": "3cd945285dffdc63acc1c813f8e74b24",
+      "file_url": "https://api.scanoss.com/file_contents/3cd945285dffdc63acc1c813f8e74b24",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "3/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2018-07-01",
+      "server": {
+        "elapsed": "0.591039s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "3cd945285dffdc63acc1c813f8e74b24",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "6478fd0f5addf26deaf47581830b1fd3",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_29_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "Makefile.flags": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "Makefile.flags",
+      "file_hash": "6d3520286828ce8303976bc87a8d4204",
+      "file_url": "https://api.scanoss.com/file_contents/6d3520286828ce8303976bc87a8d4204",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "3/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2024-07-13",
+      "server": {
+        "elapsed": "0.008821s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "6d3520286828ce8303976bc87a8d4204",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "5aed0b56272c424edd16e340b8c5adf9",
+      "url_stats": {
+        "ignored_files": 10,
+        "indexed_files": 2880,
+        "package_size": 4350362,
+        "source_files": 2727,
+        "total_files": 2890
+      },
+      "vendor": "mirror",
+      "version": "371fe9f",
+      "vulnerabilities": []
+    }
+  ],
+  "Makefile.help": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_23_0/Makefile.help",
+      "file_hash": "0d517a54c3fcf295d2eebe3c0870dee6",
+      "file_url": "https://api.scanoss.com/file_contents/0d517a54c3fcf295d2eebe3c0870dee6",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [],
+      "release_date": "2014-12-24",
+      "server": {
+        "elapsed": "1.617623s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "0d517a54c3fcf295d2eebe3c0870dee6",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "500c1e6d37bde5c54390c053390c2764",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_23_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2016-6301",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+        },
+        {
+          "CVE": "CVE-2016-2148",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+        },
+        {
+          "CVE": "CVE-2016-2147",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+        },
+        {
+          "CVE": "CVE-2018-1000517",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2017-16544",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+        },
+        {
+          "CVE": "CVE-2015-9261",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2015-9261"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "NOFORK_NOEXEC.sh": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_29_0/NOFORK_NOEXEC.sh",
+      "file_hash": "7f7ec23a3c35e88952e041711700e7e6",
+      "file_url": "https://api.scanoss.com/file_contents/7f7ec23a3c35e88952e041711700e7e6",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2018-07-01",
+      "server": {
+        "elapsed": "0.047612s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "7f7ec23a3c35e88952e041711700e7e6",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "6478fd0f5addf26deaf47581830b1fd3",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_29_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "TODO_unicode": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_17_0/TODO_unicode",
+      "file_hash": "7f16a6a80bddd9203d2dc4f7e3b635ea",
+      "file_url": "https://api.scanoss.com/file_contents/7f16a6a80bddd9203d2dc4f7e3b635ea",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2010-07-06",
+      "server": {
+        "elapsed": "1.620756s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "7f16a6a80bddd9203d2dc4f7e3b635ea",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "9b68138df8557fd837ffb2eebfb66d07",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_17_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2014-9645",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2014-9645"
+        },
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2016-6301",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+        },
+        {
+          "CVE": "CVE-2013-1813",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2013-1813"
+        },
+        {
+          "CVE": "CVE-2011-2716",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2011-2716"
+        },
+        {
+          "CVE": "CVE-2016-2148",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+        },
+        {
+          "CVE": "CVE-2011-5325",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2011-5325"
+        },
+        {
+          "CVE": "CVE-2016-2147",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+        },
+        {
+          "CVE": "CVE-2018-1000517",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2017-16544",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+        },
+        {
+          "CVE": "CVE-2015-9261",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2015-9261"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "auditcodebase/samplecodebase": [
+    {
+      "component": "slides/slidePresenter",
+      "copyrights": [
+        {
+          "name": "2006 Allen Shaw",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "presentations/presentations.txt",
+      "file_hash": "5177a58dc65c8a14dc90c69db3bf3dd2",
+      "file_url": "https://api.scanoss.com/file_contents/5177a58dc65c8a14dc90c69db3bf3dd2",
+      "id": "file",
+      "latest": "0.33",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        },
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/MPL-1.1.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-2.0",
+          "name": "MPL-1.1",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/MPL-1.1.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "purl": [
+        "pkg:sourceforge/slides/slidepresenter"
+      ],
+      "quality": [],
+      "release_date": "2007-01-13",
+      "server": {
+        "elapsed": "1.520994s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "5177a58dc65c8a14dc90c69db3bf3dd2",
+      "status": "pending",
+      "url": "https://sourceforge.net/projects/slides/slidepresenter",
+      "url_hash": "5f1ef950b48551ec1b2f9995b335a939",
+      "url_stats": {
+        "ignored_files": 0,
+        "indexed_files": 136,
+        "package_size": 354505,
+        "source_files": 111,
+        "total_files": 136
+      },
+      "vendor": "sourceforge.net",
+      "version": "0.21",
+      "vulnerabilities": []
+    }
+  ],
+  "busybox/INSTALL": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_20_0/INSTALL",
+      "file_hash": "d40c86f7b471e6064e959f861f3db513",
+      "file_url": "https://api.scanoss.com/file_contents/d40c86f7b471e6064e959f861f3db513",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2012-04-22",
+      "server": {
+        "elapsed": "0.065399s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "d40c86f7b471e6064e959f861f3db513",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "945dd15e1e0bad1bab412370eea71f37",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_20_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2014-9645",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2014-9645"
+        },
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2016-6301",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+        },
+        {
+          "CVE": "CVE-2013-1813",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2013-1813"
+        },
+        {
+          "CVE": "CVE-2016-2148",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+        },
+        {
+          "CVE": "CVE-2011-5325",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2011-5325"
+        },
+        {
+          "CVE": "CVE-2016-2147",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+        },
+        {
+          "CVE": "CVE-2018-1000517",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2017-16544",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+        },
+        {
+          "CVE": "CVE-2015-9261",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2015-9261"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "busybox/Makefile.custom": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_29_0/Makefile.custom",
+      "file_hash": "3cd945285dffdc63acc1c813f8e74b24",
+      "file_url": "https://api.scanoss.com/file_contents/3cd945285dffdc63acc1c813f8e74b24",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "3/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2018-07-01",
+      "server": {
+        "elapsed": "0.029120s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "3cd945285dffdc63acc1c813f8e74b24",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "6478fd0f5addf26deaf47581830b1fd3",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_29_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "busybox/Makefile.flags": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "Makefile.flags",
+      "file_hash": "6d3520286828ce8303976bc87a8d4204",
+      "file_url": "https://api.scanoss.com/file_contents/6d3520286828ce8303976bc87a8d4204",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "3/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2024-07-13",
+      "server": {
+        "elapsed": "0.006110s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "6d3520286828ce8303976bc87a8d4204",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "5aed0b56272c424edd16e340b8c5adf9",
+      "url_stats": {
+        "ignored_files": 10,
+        "indexed_files": 2880,
+        "package_size": 4350362,
+        "source_files": 2727,
+        "total_files": 2890
+      },
+      "vendor": "mirror",
+      "version": "371fe9f",
+      "vulnerabilities": []
+    }
+  ],
+  "busybox/Makefile.help": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_23_0/Makefile.help",
+      "file_hash": "0d517a54c3fcf295d2eebe3c0870dee6",
+      "file_url": "https://api.scanoss.com/file_contents/0d517a54c3fcf295d2eebe3c0870dee6",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [],
+      "release_date": "2014-12-24",
+      "server": {
+        "elapsed": "0.927590s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "0d517a54c3fcf295d2eebe3c0870dee6",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "500c1e6d37bde5c54390c053390c2764",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_23_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2016-6301",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+        },
+        {
+          "CVE": "CVE-2016-2148",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+        },
+        {
+          "CVE": "CVE-2016-2147",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+        },
+        {
+          "CVE": "CVE-2018-1000517",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2017-16544",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+        },
+        {
+          "CVE": "CVE-2015-9261",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2015-9261"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "busybox/NOFORK_NOEXEC.sh": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_29_0/NOFORK_NOEXEC.sh",
+      "file_hash": "7f7ec23a3c35e88952e041711700e7e6",
+      "file_url": "https://api.scanoss.com/file_contents/7f7ec23a3c35e88952e041711700e7e6",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2018-07-01",
+      "server": {
+        "elapsed": "0.016434s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "7f7ec23a3c35e88952e041711700e7e6",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "6478fd0f5addf26deaf47581830b1fd3",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_29_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "busybox/TODO_unicode": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_17_0/TODO_unicode",
+      "file_hash": "7f16a6a80bddd9203d2dc4f7e3b635ea",
+      "file_url": "https://api.scanoss.com/file_contents/7f16a6a80bddd9203d2dc4f7e3b635ea",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2010-07-06",
+      "server": {
+        "elapsed": "0.080662s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "7f16a6a80bddd9203d2dc4f7e3b635ea",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "9b68138df8557fd837ffb2eebfb66d07",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_17_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2014-9645",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2014-9645"
+        },
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-20679",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2016-6301",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+        },
+        {
+          "CVE": "CVE-2013-1813",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2013-1813"
+        },
+        {
+          "CVE": "CVE-2011-2716",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2011-2716"
+        },
+        {
+          "CVE": "CVE-2016-2148",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+        },
+        {
+          "CVE": "CVE-2011-5325",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2011-5325"
+        },
+        {
+          "CVE": "CVE-2016-2147",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+        },
+        {
+          "CVE": "CVE-2018-1000517",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2017-16544",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+        },
+        {
+          "CVE": "CVE-2015-9261",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2015-9261"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "busybox/hello": [
+    {
+      "component": "blueflops/blueflops-filesystem",
+      "copyrights": [],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "CVS/Repository",
+      "file_hash": "6765d9ccd08c622395efc466ca7b8d3b",
+      "file_url": "https://api.scanoss.com/file_contents/6765d9ccd08c622395efc466ca7b8d3b",
+      "id": "file",
+      "latest": "1.1.0",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "scancode",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "purl": [
+        "pkg:sourceforge/blueflops/blueflops-filesystem"
+      ],
+      "quality": [],
+      "release_date": "2003-05-22",
+      "server": {
+        "elapsed": "0.018108s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "6765d9ccd08c622395efc466ca7b8d3b",
+      "status": "pending",
+      "url": "https://sourceforge.net/projects/blueflops/blueflops-filesystem",
+      "url_hash": "30807be28580c4124c1d9c2152baf8df",
+      "url_stats": {
+        "ignored_files": 11207,
+        "indexed_files": 5695,
+        "package_size": 16277671,
+        "source_files": 2361,
+        "total_files": 16902
+      },
+      "vendor": "sourceforge.net",
+      "version": "1.1.0",
+      "vulnerabilities": []
+    }
+  ],
+  "busybox/make_single_applets.sh": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_32_0/make_single_applets.sh",
+      "file_hash": "cd67a5f641bec2bf68f74a04ea787f3f",
+      "file_url": "https://api.scanoss.com/file_contents/cd67a5f641bec2bf68f74a04ea787f3f",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2020-06-26",
+      "server": {
+        "elapsed": "0.010872s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "cd67a5f641bec2bf68f74a04ea787f3f",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "184ee4908de333cbc0eaaa22cbd634e7",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_32_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2021-28831",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-28831"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "busybox/size_single_applets.sh": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_30_0/size_single_applets.sh",
+      "file_hash": "56d06e2fa45e8767891b0672b862135e",
+      "file_url": "https://api.scanoss.com/file_contents/56d06e2fa45e8767891b0672b862135e",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2018-12-30",
+      "server": {
+        "elapsed": "0.014106s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "56d06e2fa45e8767891b0672b862135e",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "91d409a8d414eeffc496b78588eb8f50",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_30_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "client-encryption-java 1.zip": [
+    {
+      "id": "none",
+      "server": {
+        "elapsed": "0.000600s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      }
+    }
+  ],
+  "make_single_applets.sh": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_32_0/make_single_applets.sh",
+      "file_hash": "cd67a5f641bec2bf68f74a04ea787f3f",
+      "file_url": "https://api.scanoss.com/file_contents/cd67a5f641bec2bf68f74a04ea787f3f",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2020-06-26",
+      "server": {
+        "elapsed": "0.022037s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "cd67a5f641bec2bf68f74a04ea787f3f",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "184ee4908de333cbc0eaaa22cbd634e7",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_32_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2021-28831",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-28831"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ],
+  "size_single_applets.sh": [
+    {
+      "component": "busybox",
+      "copyrights": [
+        {
+          "name": "copyright (C) 1996-2006 Julian R Seward.  All",
+          "source": "license_file"
+        },
+        {
+          "name": "Copyright (C) 1989; 1991 Free Software Foundation; Inc.",
+          "source": "license_file"
+        }
+      ],
+      "cryptography": [],
+      "dependencies": [],
+      "file": "busybox-1_30_0/size_single_applets.sh",
+      "file_hash": "56d06e2fa45e8767891b0672b862135e",
+      "file_url": "https://api.scanoss.com/file_contents/56d06e2fa45e8767891b0672b862135e",
+      "health": {
+        "creation_date": "2013-01-09",
+        "forks": 656,
+        "issues": 84,
+        "last_push": "2024-09-25",
+        "last_update": "2025-10-31",
+        "stars": 1929
+      },
+      "id": "file",
+      "latest": "371fe9f",
+      "licenses": [
+        {
+          "checklist_url": "https://www.osadl.org/fileadmin/checklists/unreflicenses/GPL-2.0-only.txt",
+          "copyleft": "yes",
+          "incompatible_with": "Apache-1.0, Apache-1.1, Apache-2.0, BSD-4-Clause, BSD-4-Clause-UC, BSD-4.3TAHOE, ECL-2.0, FTL, IJG, LicenseRef-scancode-bsla-no-advert, Minpack, OpenSSL, PHP-3.01, PSF-2.0, Python-2.0, zlib-acknowledgement, XFree86-1.1",
+          "name": "GPL-2.0-only",
+          "osadl_updated": "2026-02-12T16:31:00+0000",
+          "patent_hints": "yes",
+          "source": "license_file",
+          "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        }
+      ],
+      "lines": "all",
+      "matched": "100%",
+      "oss_lines": "all",
+      "provenance": " ",
+      "purl": [
+        "pkg:github/mirror/busybox",
+        "pkg:golang/github.com/mirror/busybox"
+      ],
+      "quality": [
+        {
+          "score": "4/5",
+          "source": "best_practices"
+        }
+      ],
+      "release_date": "2018-12-30",
+      "server": {
+        "elapsed": "0.025122s",
+        "flags": "0",
+        "hostname": "p37",
+        "kb_version": {
+          "daily": "26.07.30",
+          "monthly": "26.07"
+        },
+        "version": "5.4.25"
+      },
+      "source_hash": "56d06e2fa45e8767891b0672b862135e",
+      "status": "pending",
+      "url": "https://github.com/mirror/busybox",
+      "url_hash": "91d409a8d414eeffc496b78588eb8f50",
+      "url_stats": {},
+      "vendor": "mirror",
+      "version": "1_30_0",
+      "vulnerabilities": [
+        {
+          "CVE": "CVE-2019-5747",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+        },
+        {
+          "CVE": "CVE-2018-1000500",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+        },
+        {
+          "CVE": "CVE-2021-42376",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+        },
+        {
+          "CVE": "CVE-2021-42374",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+        },
+        {
+          "CVE": "CVE-2021-42379",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+        },
+        {
+          "CVE": "CVE-2021-42378",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+        },
+        {
+          "CVE": "CVE-2021-42382",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+        },
+        {
+          "CVE": "CVE-2021-42384",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+        },
+        {
+          "CVE": "CVE-2021-42385",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+        },
+        {
+          "CVE": "CVE-2021-42386",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+        },
+        {
+          "CVE": "CVE-2021-42381",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+        },
+        {
+          "CVE": "CVE-2021-42380",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+        },
+        {
+          "CVE": "CVE-2022-28391",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "HIGH",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+        },
+        {
+          "CVE": "CVE-2022-48174",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "CRITICAL",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+        },
+        {
+          "CVE": "CVE-2025-46394",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "LOW",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+        },
+        {
+          "CVE": "CVE-2025-60876",
+          "ID": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+          "introduced": "",
+          "patched": "",
+          "reported": "",
+          "severity": "MEDIUM",
+          "source": "nvd",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+        }
+      ]
+    }
+  ]
+}
