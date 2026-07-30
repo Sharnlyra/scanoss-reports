@@ -19725,6 +19725,442 @@
           "max_match_pct": 100.0
         }
       ]
+    },
+    "crypto": {
+      "asset_count": 24,
+      "primitive_counts": {
+        "block-cipher": 1,
+        "ae": 2,
+        "hash": 6,
+        "stream-cipher": 1,
+        "signature": 4,
+        "mac": 5,
+        "kdf": 1,
+        "drbg": 1,
+        "related-crypto-material": 3
+      },
+      "risk_counts": {
+        "review": 21,
+        "quantum-vulnerable": 3
+      },
+      "assets": [
+        {
+          "name": "AES-CBC-PKCS5Padding",
+          "primitive": "block-cipher",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/aes/AESCBC.java",
+              "line": 31
+            }
+          ]
+        },
+        {
+          "name": "AES-GCM-NoPadding",
+          "primitive": "ae",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/aes/AESGCM.java",
+              "line": 29
+            }
+          ]
+        },
+        {
+          "name": "AES-SIV",
+          "primitive": "ae",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 98
+            }
+          ]
+        },
+        {
+          "name": "BLAKE2b-256",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "256",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 50
+            }
+          ]
+        },
+        {
+          "name": "ChaCha20",
+          "primitive": "stream-cipher",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 89
+            }
+          ]
+        },
+        {
+          "name": "ECDSA-SHA256",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+              "line": 37
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+              "line": 45
+            }
+          ]
+        },
+        {
+          "name": "Ed25519",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "256",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 70
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 70
+            }
+          ]
+        },
+        {
+          "name": "HMAC-MD5",
+          "primitive": "mac",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 38
+            }
+          ]
+        },
+        {
+          "name": "HMAC-SHA-256",
+          "primitive": "mac",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 40
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 44
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 59
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 63
+            }
+          ]
+        },
+        {
+          "name": "HMAC-SHA-512",
+          "primitive": "mac",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 48
+            }
+          ]
+        },
+        {
+          "name": "HMAC-SHA256",
+          "primitive": "mac",
+          "algorithm_family": "",
+          "parameter_size": "256",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "name": "HMAC-SHA512",
+          "primitive": "mac",
+          "algorithm_family": "",
+          "parameter_size": "512",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 27
+            }
+          ]
+        },
+        {
+          "name": "MD5",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "128",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 25
+            }
+          ]
+        },
+        {
+          "name": "PBKDF2",
+          "primitive": "kdf",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+              "line": 22
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+              "line": 29
+            }
+          ]
+        },
+        {
+          "name": "RSA-PKCS1-SHA256",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+              "line": 21
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+              "line": 29
+            }
+          ]
+        },
+        {
+          "name": "RSA-PSS",
+          "primitive": "signature",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "quantum-vulnerable",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+              "line": 54
+            }
+          ]
+        },
+        {
+          "name": "SHA-1",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "160",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 32
+            }
+          ]
+        },
+        {
+          "name": "SHA-256",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "256",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 14
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 36
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/EncryptionConfigBuilder.java",
+              "line": 51
+            }
+          ]
+        },
+        {
+          "name": "SHA-512",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "512",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "name": "SHA1PRNG",
+          "primitive": "drbg",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/aes/AESEncryption.java",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "name": "SHA3-256",
+          "primitive": "hash",
+          "algorithm_family": "",
+          "parameter_size": "256",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 39
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 108
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 108
+            }
+          ]
+        },
+        {
+          "name": "initialization-vector",
+          "primitive": "related-crypto-material",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/FieldLevelEncryptionParams.java",
+              "line": 103
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/aes/AESCBC.java",
+              "line": 27
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/aes/AESEncryption.java",
+              "line": 22
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/aes/AESGCM.java",
+              "line": 23
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/jwe/JweObject.java",
+              "line": 67
+            }
+          ]
+        },
+        {
+          "name": "key",
+          "primitive": "related-crypto-material",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+              "line": 41
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+              "line": 48
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 61
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 80
+            }
+          ]
+        },
+        {
+          "name": "secret-key",
+          "primitive": "related-crypto-material",
+          "algorithm_family": "",
+          "parameter_size": "",
+          "quantum_risk": "review",
+          "occurrences": [
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 20
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 28
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+              "line": 39
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 116
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+              "line": 117
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/FieldLevelEncryptionParams.java",
+              "line": 112
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/FieldLevelEncryptionParams.java",
+              "line": 113
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/aes/AESEncryption.java",
+              "line": 32
+            },
+            {
+              "file": "src/main/java/com/mastercard/developer/encryption/jwe/JweObject.java",
+              "line": 74
+            }
+          ]
+        }
+      ]
     }
   }
 ]
