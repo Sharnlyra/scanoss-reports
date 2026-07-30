@@ -18790,5 +18790,361 @@
         }
       ]
     }
+  },
+  {
+    "repo": "Sharnlyra/bond007",
+    "commit": "d0d55e5d54de5adb96ba9fd2dde84446a963a878",
+    "branch": "main",
+    "actor": "Sharnlyra",
+    "event": "push",
+    "timestamp": "2026-07-30T09:16:25Z",
+    "summary": {
+      "component_count": 20,
+      "vulnerability_count": 31,
+      "severity_counts": {
+        "MEDIUM": 7,
+        "HIGH": 8,
+        "CRITICAL": 8,
+        "LOW": 7,
+        "MODERATE": 1
+      },
+      "license_counts": {
+        "GPL-2.0-only": 11,
+        "Apache-2.0": 6,
+        "LicenseRef-scancode-ms-nuget-package-manager": 1,
+        "LicenseRef-scancode-unknown-license-reference": 1,
+        "GPL-3.0-only": 3,
+        "MPL-1.1": 1,
+        "Artistic-1.0": 1,
+        "GPL-1.0-only": 1,
+        "GPL-1.0-or-later": 1
+      },
+      "avg_snippet_match_pct": 97.25,
+      "components": [
+        {
+          "component": "busybox",
+          "version": "1_20_0",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+              "severity": "MEDIUM"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+              "severity": "HIGH"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.20.0:*:*:*:*:*:*:*",
+              "severity": "LOW"
+            }
+          ],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "busybox",
+          "version": "1_29_0",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+              "severity": "HIGH"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+              "severity": "MEDIUM"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*",
+              "severity": "LOW"
+            }
+          ],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "busybox",
+          "version": "371fe9f",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "busybox",
+          "version": "1_23_0",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+              "severity": "HIGH"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+              "severity": "MEDIUM"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.23.0:*:*:*:*:*:*:*",
+              "severity": "LOW"
+            }
+          ],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "busybox",
+          "version": "1_17_0",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+              "severity": "MEDIUM"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+              "severity": "HIGH"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.17.0:*:*:*:*:*:*:*",
+              "severity": "LOW"
+            }
+          ],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "NuGet.CommandLine",
+          "version": "2.8.5",
+          "licenses": [
+            "Apache-2.0",
+            "LicenseRef-scancode-ms-nuget-package-manager",
+            "LicenseRef-scancode-unknown-license-reference"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "duck_hub_full",
+          "version": "b4d5e43",
+          "licenses": [],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "log4j-api",
+          "version": "2.1",
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "log4j-api",
+          "version": "2.3",
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "log4j-core",
+          "version": "2.1",
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "GHSA-vc5p-v9hr-52mj",
+              "severity": "MODERATE"
+            },
+            {
+              "id": "GHSA-vwqq-5vrc-xw9h",
+              "severity": "LOW"
+            },
+            {
+              "id": "GHSA-7rjr-3q55-vv33",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "GHSA-fxph-q3j8-mv87",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "GHSA-p6xc-xr62-6r2g",
+              "severity": "HIGH"
+            }
+          ],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "rsync-git",
+          "version": "v1.6.6",
+          "licenses": [
+            "GPL-2.0-only",
+            "GPL-3.0-only"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 63.0
+        },
+        {
+          "component": "rsync-git",
+          "version": "v1.6.7",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 94.0
+        },
+        {
+          "component": "rsync",
+          "version": "v3.0.7pre2",
+          "licenses": [
+            "GPL-3.0-only"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "rsync",
+          "version": "v3.0.7pre1",
+          "licenses": [
+            "GPL-3.0-only"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "slides/slidePresenter",
+          "version": "0.21",
+          "licenses": [
+            "GPL-2.0-only",
+            "MPL-1.1"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "blueflops/blueflops-filesystem",
+          "version": "1.1.0",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "busybox",
+          "version": "1_32_0",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+              "severity": "MEDIUM"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+              "severity": "HIGH"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.32.0:*:*:*:*:*:*:*",
+              "severity": "LOW"
+            }
+          ],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "busybox",
+          "version": "1_30_0",
+          "licenses": [
+            "GPL-2.0-only"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+              "severity": "HIGH"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+              "severity": "MEDIUM"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+              "severity": "CRITICAL"
+            },
+            {
+              "id": "cpe:2.3:a:busybox:busybox:1.30.0:*:*:*:*:*:*:*",
+              "severity": "LOW"
+            }
+          ],
+          "max_match_pct": 100.0
+        },
+        {
+          "component": "github.com/openssl/openssl",
+          "version": "v0.0.0-20260403150649-33cb1807a08b",
+          "licenses": [
+            "Apache-2.0",
+            "Artistic-1.0",
+            "GPL-1.0-only",
+            "GPL-1.0-or-later"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 88.0
+        },
+        {
+          "component": "openssl",
+          "version": "openssl-3.0.0-alpha5",
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "vulnerabilities": [
+            {
+              "id": "cpe:2.3:a:openssl:openssl:3.0.0:alpha5:*:*:*:*:*:*",
+              "severity": "MEDIUM"
+            },
+            {
+              "id": "cpe:2.3:a:openssl:openssl:3.0.0:alpha5:*:*:*:*:*:*",
+              "severity": "HIGH"
+            }
+          ],
+          "max_match_pct": 100.0
+        }
+      ]
+    },
+    "crypto": {
+      "asset_count": 0,
+      "primitive_counts": {},
+      "risk_counts": {},
+      "assets": []
+    }
   }
 ]
