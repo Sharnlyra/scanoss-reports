@@ -35,121 +35,96 @@
   .mono { font-family: 'JetBrains Mono', monospace; }
 
   .sidebar {
-    width: var(--sidebar-w);
-    flex-shrink: 0;
-    background: var(--panel);
-    border-right: 1px solid var(--border);
-    padding: 20px 14px;
-    position: sticky;
-    top: 0;
-    height: 100vh;
+    width: var(--sidebar-w); flex-shrink: 0;
+    background: var(--panel); border-right: 1px solid var(--border);
+    padding: 20px 14px; position: sticky; top: 0; height: 100vh;
   }
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 8px 20px 8px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 16px;
-  }
-  .logo-mark {
-    width: 22px; height: 22px;
-    border-radius: 5px;
-    background: linear-gradient(135deg, var(--accent), #1a7f74);
-    flex-shrink: 0;
-  }
+  .logo { display: flex; align-items: center; gap: 8px; padding: 0 8px 20px 8px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+  .logo-mark { width: 22px; height: 22px; border-radius: 5px; background: linear-gradient(135deg, var(--accent), #1a7f74); flex-shrink: 0; }
   .logo-text { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
   .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 10px;
-    border-radius: 6px;
-    color: var(--muted);
-    font-size: 13.5px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 2px;
+    display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 6px;
+    color: var(--muted); font-size: 13.5px; font-weight: 500; cursor: pointer; margin-bottom: 2px;
   }
   .nav-item:hover { background: var(--panel-hover); color: var(--text); }
   .nav-item.active { background: var(--accent-dim); color: var(--accent); }
   .nav-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.6; }
 
-  .main { flex: 1; padding: 28px 36px; max-width: 1200px; }
-  .topline { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; }
+  .main { flex: 1; padding: 28px 36px; max-width: 1280px; }
+  .topline { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
   .topline h1 { font-size: 22px; font-weight: 600; }
   .topline .subtitle { color: var(--muted); font-size: 13px; margin-top: 4px; }
   .breadcrumb { color: var(--muted); font-size: 12.5px; margin-bottom: 6px; }
   .breadcrumb .crumb-link { color: var(--accent); cursor: pointer; }
+  .toolbar { display: flex; gap: 8px; align-items: center; }
 
   .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
-  .metric-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px;
-  }
+  .metric-card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
   .metric-card .m-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
   .metric-card .m-value { font-size: 26px; font-weight: 700; margin-top: 6px; font-family: 'Space Grotesk', sans-serif; }
   .metric-card.crit .m-value { color: var(--crit); }
   .metric-card.warn .m-value { color: var(--high); }
 
-  .panel {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  .panel-title { font-size: 14px; font-weight: 600; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+  .panel-title { font-size: 14px; font-weight: 600; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
 
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 500; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  th { color: var(--muted); font-weight: 500; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; user-select: none; white-space: nowrap; }
+  th:hover { color: var(--text); }
+  th .sort-arrow { font-size: 9px; margin-left: 4px; opacity: 0.6; }
   tr.clickable { cursor: pointer; }
   tr.clickable:hover td { background: var(--panel-hover); }
 
   .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 2px 8px;
-    border-radius: 20px;
-    font-size: 11.5px;
-    font-weight: 500;
-    font-family: 'JetBrains Mono', monospace;
+    display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 20px;
+    font-size: 11.5px; font-weight: 500; font-family: 'JetBrains Mono', monospace;
   }
   .chip.crit { background: rgba(248,81,73,0.15); color: var(--crit); }
   .chip.high { background: rgba(251,139,36,0.15); color: var(--high); }
   .chip.medium { background: rgba(227,179,65,0.15); color: var(--med); }
   .chip.low, .chip.unknown { background: rgba(88,166,255,0.12); color: var(--low); }
   .chip.license { background: rgba(45,212,191,0.12); color: var(--accent); }
+  .chip.ok { background: rgba(63,185,80,0.15); color: #3fb950; }
+  .chip.flagged { background: rgba(248,81,73,0.15); color: var(--crit); }
+  .chip.added { background: rgba(63,185,80,0.15); color: #3fb950; }
+  .chip.removed { background: rgba(248,81,73,0.15); color: var(--crit); }
+  .chip.changed { background: rgba(227,179,65,0.15); color: var(--med); }
 
-  .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+  .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; flex-wrap: wrap; }
   .tab-btn {
-    padding: 9px 16px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--muted);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    background: none;
-    border-top: none; border-left: none; border-right: none;
-    font-family: inherit;
+    padding: 9px 16px; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer;
+    border-bottom: 2px solid transparent; background: none; border-top: none; border-left: none; border-right: none; font-family: inherit;
   }
   .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
   .empty-state { color: var(--muted); font-size: 13px; padding: 28px 0; text-align: center; }
-  select {
-    background: var(--bg);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 6px 10px;
-    font-size: 12.5px;
-    font-family: inherit;
+
+  select, input[type=text] {
+    background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px;
+    padding: 6px 10px; font-size: 12.5px; font-family: inherit;
+  }
+  input[type=text]::placeholder { color: var(--muted); }
+  .search-input { width: 220px; }
+
+  button.btn {
+    background: var(--panel-hover); color: var(--text); border: 1px solid var(--border); border-radius: 6px;
+    padding: 6px 12px; font-size: 12.5px; font-family: inherit; cursor: pointer; font-weight: 500;
+  }
+  button.btn:hover { border-color: var(--accent); color: var(--accent); }
+  button.btn.primary { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+  .diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .diff-col h3 { font-size: 13px; margin-bottom: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .diff-item { padding: 8px 10px; border-radius: 6px; margin-bottom: 6px; font-size: 12.5px; background: var(--bg); border: 1px solid var(--border); }
+
+  @media print {
+    .sidebar, .toolbar, .tabs, select#commit-select { display: none !important; }
+    body { background: white; color: black; }
+    .panel, .metric-card { border: 1px solid #ccc; background: white; }
+    .tab-panel { display: block !important; }
   }
 </style>
 </head>
@@ -160,12 +135,13 @@
     <div class="logo-mark"></div>
     <div class="logo-text">SCA Portfolio</div>
   </div>
-  <div class="nav-item active" data-view="portfolio"><span class="nav-dot"></span> Portfolio</div>
-  <div class="nav-item" data-view="portfolio"><span class="nav-dot"></span> Projects</div>
+  <div class="nav-item active" data-nav="portfolio"><span class="nav-dot"></span> Portfolio</div>
+  <div class="nav-item" data-nav="toprisks"><span class="nav-dot"></span> Top Risks</div>
 </div>
 
 <div class="main">
 
+  <!-- PORTFOLIO -->
   <div id="view-portfolio">
     <div class="topline">
       <div>
@@ -173,20 +149,21 @@
         <div class="subtitle">Component, vulnerability, and license risk across every tracked project</div>
       </div>
     </div>
-
     <div class="metrics-row" id="portfolio-metrics"></div>
-
     <div class="panel">
-      <div class="panel-title">Projects</div>
+      <div class="panel-title">
+        <span>Projects</span>
+        <input type="text" class="search-input" id="portfolio-search" placeholder="Search projects…">
+      </div>
       <table id="projects-table">
         <thead>
           <tr>
-            <th>Project</th>
-            <th>Latest commit</th>
-            <th>Components</th>
-            <th>Vulnerabilities</th>
-            <th>Risk</th>
-            <th>Last scanned</th>
+            <th data-key="repo">Project <span class="sort-arrow"></span></th>
+            <th data-key="commit">Latest commit <span class="sort-arrow"></span></th>
+            <th data-key="components">Components <span class="sort-arrow"></span></th>
+            <th data-key="vulns">Vulnerabilities <span class="sort-arrow"></span></th>
+            <th data-key="risk">Risk <span class="sort-arrow"></span></th>
+            <th data-key="timestamp">Last scanned <span class="sort-arrow"></span></th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -195,6 +172,41 @@
     </div>
   </div>
 
+  <!-- TOP RISKS -->
+  <div id="view-toprisks" style="display:none;">
+    <div class="topline">
+      <div>
+        <h1>Top Risks</h1>
+        <div class="subtitle">Highest-risk components across the entire portfolio, ranked by severity-weighted score</div>
+      </div>
+      <div class="toolbar">
+        <button class="btn" id="export-toprisks-csv">Export CSV</button>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">
+        <span>Ranked components</span>
+        <input type="text" class="search-input" id="toprisks-search" placeholder="Search components…">
+      </div>
+      <table id="toprisks-table">
+        <thead>
+          <tr>
+            <th data-key="rank">#</th>
+            <th data-key="component">Component <span class="sort-arrow"></span></th>
+            <th data-key="version">Version</th>
+            <th data-key="project">Project <span class="sort-arrow"></span></th>
+            <th data-key="license">License(s)</th>
+            <th data-key="vulns">Vulnerabilities <span class="sort-arrow"></span></th>
+            <th data-key="score">Risk score <span class="sort-arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="empty-state" id="toprisks-empty" style="display:none;">No components recorded yet.</div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL -->
   <div id="view-project" style="display:none;">
     <div class="breadcrumb"><span class="crumb-link" id="back-to-portfolio">Portfolio</span> / <span id="project-name-crumb"></span></div>
     <div class="topline">
@@ -202,7 +214,10 @@
         <h1 id="project-title"></h1>
         <div class="subtitle" id="project-subtitle"></div>
       </div>
-      <select id="commit-select"></select>
+      <div class="toolbar">
+        <select id="commit-select"></select>
+        <button class="btn" id="export-project-pdf">Export PDF</button>
+      </div>
     </div>
 
     <div class="metrics-row" id="project-metrics"></div>
@@ -217,35 +232,92 @@
       <button class="tab-btn" data-tab="vulnerabilities">Vulnerabilities</button>
       <button class="tab-btn" data-tab="licenses">Licenses</button>
       <button class="tab-btn" data-tab="snippets">Snippet matching</button>
+      <button class="tab-btn" data-tab="diff">Compare commits</button>
     </div>
 
     <div class="tab-panel active" id="tab-components">
+      <div class="panel-title">
+        <input type="text" class="search-input" id="components-search" placeholder="Search components…">
+        <button class="btn" id="export-components-csv">Export CSV</button>
+      </div>
       <table>
-        <thead><tr><th>Component</th><th>Version</th><th>License(s)</th><th>Snippet match</th></tr></thead>
+        <thead><tr>
+          <th data-key="component">Component <span class="sort-arrow"></span></th>
+          <th data-key="version">Version <span class="sort-arrow"></span></th>
+          <th data-key="licenses">License(s)</th>
+          <th data-key="match">Snippet match <span class="sort-arrow"></span></th>
+        </tr></thead>
         <tbody id="components-tbody"></tbody>
       </table>
     </div>
 
     <div class="tab-panel" id="tab-vulnerabilities">
+      <div class="panel-title">
+        <input type="text" class="search-input" id="vulns-search" placeholder="Search CVEs or components…">
+        <button class="btn" id="export-vulns-csv">Export CSV</button>
+      </div>
       <table>
-        <thead><tr><th>CVE</th><th>Severity</th><th>Component</th><th>Version</th></tr></thead>
+        <thead><tr>
+          <th data-key="id">CVE <span class="sort-arrow"></span></th>
+          <th data-key="severity">Severity <span class="sort-arrow"></span></th>
+          <th data-key="component">Component <span class="sort-arrow"></span></th>
+          <th data-key="version">Version</th>
+        </tr></thead>
         <tbody id="vulns-tbody"></tbody>
       </table>
     </div>
 
     <div class="tab-panel" id="tab-licenses">
+      <div class="panel-title">
+        <span>Policy</span>
+        <select id="license-policy-select">
+          <option value="permissive-only">Permissive only</option>
+          <option value="allow-weak-copyleft">Allow weak copyleft</option>
+          <option value="allow-all">Allow all licenses</option>
+        </select>
+        <button class="btn" id="export-licenses-csv">Export CSV</button>
+      </div>
       <table>
-        <thead><tr><th>License</th><th>Component count</th></tr></thead>
+        <thead><tr>
+          <th data-key="license">License <span class="sort-arrow"></span></th>
+          <th data-key="category">Category</th>
+          <th data-key="count">Component count <span class="sort-arrow"></span></th>
+          <th data-key="status">Policy status</th>
+        </tr></thead>
         <tbody id="licenses-tbody"></tbody>
       </table>
     </div>
 
     <div class="tab-panel" id="tab-snippets">
+      <div class="panel-title">
+        <input type="text" class="search-input" id="snippets-search" placeholder="Search components…">
+        <button class="btn" id="export-snippets-csv">Export CSV</button>
+      </div>
       <table>
-        <thead><tr><th>Component</th><th>Version</th><th>Match %</th></tr></thead>
+        <thead><tr>
+          <th data-key="component">Component <span class="sort-arrow"></span></th>
+          <th data-key="version">Version</th>
+          <th data-key="match">Match % <span class="sort-arrow"></span></th>
+        </tr></thead>
         <tbody id="snippets-tbody"></tbody>
       </table>
     </div>
+
+    <div class="tab-panel" id="tab-diff">
+      <div class="panel-title">
+        <span>Compare two commits</span>
+        <div class="toolbar">
+          <select id="diff-base-select"></select>
+          <span style="color: var(--muted); font-size:12.5px;">→</span>
+          <select id="diff-target-select"></select>
+          <button class="btn primary" id="run-diff-btn">Compare</button>
+        </div>
+      </div>
+      <div id="diff-results">
+        <div class="empty-state">Pick a base and target commit, then click Compare.</div>
+      </div>
+    </div>
+
   </div>
 
 </div>
@@ -254,6 +326,29 @@
 let HISTORY = [];
 let PROJECTS = {};
 let trendChartInstance = null;
+let currentRepo = null;
+let sortState = {}; // tableId -> {key, dir}
+
+const LICENSE_CATEGORY = {
+  'mit': 'permissive', 'apache-2.0': 'permissive', 'apache license 2.0': 'permissive',
+  'bsd-2-clause': 'permissive', 'bsd-3-clause': 'permissive', 'isc': 'permissive',
+  'unlicense': 'permissive', '0bsd': 'permissive', 'bsd': 'permissive',
+  'lgpl-2.1': 'weak-copyleft', 'lgpl-3.0': 'weak-copyleft', 'mpl-1.1': 'weak-copyleft',
+  'mpl-2.0': 'weak-copyleft', 'epl-1.0': 'weak-copyleft', 'epl-2.0': 'weak-copyleft',
+  'gpl-2.0': 'copyleft', 'gpl-3.0': 'copyleft', 'agpl-3.0': 'copyleft',
+  'gpl-2.0-only': 'copyleft', 'gpl-3.0-only': 'copyleft', 'agpl-3.0-only': 'copyleft',
+};
+
+function licenseCategory(lic) {
+  return LICENSE_CATEGORY[(lic || '').toLowerCase()] || 'review';
+}
+
+function licensePolicyStatus(category, policy) {
+  if (policy === 'allow-all') return 'ok';
+  if (policy === 'allow-weak-copyleft') return (category === 'copyleft') ? 'flagged' : 'ok';
+  // permissive-only
+  return (category === 'permissive') ? 'ok' : 'flagged';
+}
 
 async function loadHistory() {
   try {
@@ -283,6 +378,11 @@ function riskScore(summary) {
   return Object.entries(sev).reduce((acc, [k, v]) => acc + (weights[k.toLowerCase()] || 1) * v, 0);
 }
 
+function componentRiskScore(component) {
+  const weights = { critical: 10, high: 5, medium: 2, low: 1, unknown: 1 };
+  return (component.vulnerabilities || []).reduce((acc, v) => acc + (weights[(v.severity||'unknown').toLowerCase()] || 1), 0);
+}
+
 function riskLabel(score) {
   if (score === 0) return { text: 'None', cls: 'low' };
   if (score < 10) return { text: 'Low', cls: 'low' };
@@ -290,73 +390,174 @@ function riskLabel(score) {
   return { text: 'High', cls: 'crit' };
 }
 
-function renderPortfolioMetrics(history, groups) {
+/* ---------- Generic table helpers: search + sort ---------- */
+
+function attachSearch(inputId, onFilter) {
+  const el = document.getElementById(inputId);
+  if (!el) return;
+  el.addEventListener('input', () => onFilter(el.value.trim().toLowerCase()));
+}
+
+function attachSort(tableSelector, tableId, onSort) {
+  document.querySelectorAll(`${tableSelector} th[data-key]`).forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      const state = sortState[tableId] || { key: null, dir: 1 };
+      const dir = (state.key === key) ? -state.dir : 1;
+      sortState[tableId] = { key, dir };
+      document.querySelectorAll(`${tableSelector} th .sort-arrow`).forEach(a => a.textContent = '');
+      th.querySelector('.sort-arrow').textContent = dir === 1 ? '▲' : '▼';
+      onSort(key, dir);
+    });
+  });
+}
+
+function downloadCSV(filename, rows, headers) {
+  const escape = v => `"${String(v ?? '').replace(/"/g, '""')}"`;
+  const lines = [headers.join(',')].concat(rows.map(r => headers.map(h => escape(r[h])).join(',')));
+  const blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+}
+
+/* ---------- Portfolio view ---------- */
+
+let portfolioFilter = '';
+let portfolioSort = { key: 'repo', dir: 1 };
+
+function renderPortfolioMetrics(groups) {
   const totalProjects = Object.keys(groups).length;
   const latestPerProject = Object.values(groups).map(arr => arr[arr.length - 1]);
   const totalVulns = latestPerProject.reduce((a, e) => a + (e.summary?.vulnerability_count || 0), 0);
   const projectsAtRisk = latestPerProject.filter(e => (e.summary?.vulnerability_count || 0) > 0).length;
   const totalComponents = latestPerProject.reduce((a, e) => a + (e.summary?.component_count || 0), 0);
-
   const cards = [
-    { label: 'Projects', value: totalProjects, cls: '' },
+    { label: 'Projects', value: totalProjects },
     { label: 'Portfolio vulnerabilities', value: totalVulns, cls: totalVulns > 0 ? 'crit' : '' },
     { label: 'Projects at risk', value: projectsAtRisk, cls: projectsAtRisk > 0 ? 'warn' : '' },
-    { label: 'Tracked components', value: totalComponents, cls: '' },
+    { label: 'Tracked components', value: totalComponents },
   ];
   document.getElementById('portfolio-metrics').innerHTML = cards.map(c => `
-    <div class="metric-card ${c.cls}">
-      <div class="m-label">${c.label}</div>
-      <div class="m-value">${c.value}</div>
-    </div>
+    <div class="metric-card ${c.cls||''}"><div class="m-label">${c.label}</div><div class="m-value">${c.value}</div></div>
   `).join('');
 }
 
-function renderProjectsTable(groups) {
+function getPortfolioRows(groups) {
+  return Object.entries(groups).map(([repo, arr]) => {
+    const latest = arr[arr.length - 1];
+    const s = latest.summary || {};
+    return {
+      repo, commit: latest.commit || '', components: s.component_count ?? 0,
+      vulns: s.vulnerability_count ?? 0, risk: riskScore(s), timestamp: latest.timestamp || '',
+    };
+  });
+}
+
+function renderProjectsTable() {
+  let rows = getPortfolioRows(PROJECTS);
+  if (portfolioFilter) rows = rows.filter(r => r.repo.toLowerCase().includes(portfolioFilter));
+  rows.sort((a, b) => {
+    const k = portfolioSort.key;
+    if (typeof a[k] === 'number') return (a[k] - b[k]) * portfolioSort.dir;
+    return String(a[k]).localeCompare(String(b[k])) * portfolioSort.dir;
+  });
+
   const tbody = document.querySelector('#projects-table tbody');
-  const entries = Object.entries(groups);
-  if (!entries.length) {
+  if (!rows.length) {
     document.getElementById('portfolio-empty').style.display = 'block';
     tbody.innerHTML = '';
     return;
   }
   document.getElementById('portfolio-empty').style.display = 'none';
-
-  tbody.innerHTML = entries.map(([repo, arr]) => {
-    const latest = arr[arr.length - 1];
-    const s = latest.summary || {};
-    const risk = riskLabel(riskScore(s));
+  tbody.innerHTML = rows.map(r => {
+    const risk = riskLabel(r.risk);
     return `
-      <tr class="clickable" data-repo="${repo}">
-        <td>${repo}</td>
-        <td class="mono">${(latest.commit || '').slice(0, 7)}</td>
-        <td>${s.component_count ?? 0}</td>
-        <td>${s.vulnerability_count ?? 0}</td>
+      <tr class="clickable" data-repo="${r.repo}">
+        <td>${r.repo}</td>
+        <td class="mono">${r.commit.slice(0,7)}</td>
+        <td>${r.components}</td>
+        <td>${r.vulns}</td>
         <td><span class="chip ${risk.cls}">${risk.text}</span></td>
-        <td>${latest.timestamp || '—'}</td>
-      </tr>
-    `;
+        <td>${r.timestamp}</td>
+      </tr>`;
   }).join('');
-
-  tbody.querySelectorAll('tr.clickable').forEach(row => {
-    row.addEventListener('click', () => openProject(row.dataset.repo));
-  });
+  tbody.querySelectorAll('tr.clickable').forEach(row => row.addEventListener('click', () => openProject(row.dataset.repo)));
 }
 
+/* ---------- Top Risks view ---------- */
+
+let topRisksFilter = '';
+let topRisksSort = { key: 'score', dir: -1 };
+
+function getAllLatestComponents() {
+  const rows = [];
+  Object.entries(PROJECTS).forEach(([repo, arr]) => {
+    const latest = arr[arr.length - 1];
+    (latest.summary?.components || []).forEach(c => {
+      rows.push({
+        component: c.component, version: c.version, project: repo,
+        license: (c.licenses || []).join(', ') || '—',
+        vulns: (c.vulnerabilities || []).length,
+        score: componentRiskScore(c),
+      });
+    });
+  });
+  return rows;
+}
+
+function renderTopRisks() {
+  let rows = getAllLatestComponents().filter(r => r.score > 0 || r.vulns > 0);
+  if (topRisksFilter) rows = rows.filter(r => r.component.toLowerCase().includes(topRisksFilter) || r.project.toLowerCase().includes(topRisksFilter));
+  rows.sort((a, b) => {
+    const k = topRisksSort.key;
+    if (typeof a[k] === 'number') return (a[k] - b[k]) * topRisksSort.dir;
+    return String(a[k]).localeCompare(String(b[k])) * topRisksSort.dir;
+  });
+
+  const tbody = document.querySelector('#toprisks-table tbody');
+  if (!rows.length) {
+    document.getElementById('toprisks-empty').style.display = 'block';
+    tbody.innerHTML = '';
+    return;
+  }
+  document.getElementById('toprisks-empty').style.display = 'none';
+  tbody.innerHTML = rows.map((r, i) => `
+    <tr>
+      <td>${i+1}</td>
+      <td>${r.component}</td>
+      <td class="mono">${r.version}</td>
+      <td>${r.project}</td>
+      <td>${r.license}</td>
+      <td>${r.vulns}</td>
+      <td><span class="chip ${riskLabel(r.score).cls}">${r.score}</span></td>
+    </tr>
+  `).join('');
+}
+
+/* ---------- Project detail view ---------- */
+
 function openProject(repo) {
-  document.getElementById('view-portfolio').style.display = 'none';
-  document.getElementById('view-project').style.display = 'block';
+  currentRepo = repo;
+  switchNav('project');
   document.getElementById('project-name-crumb').textContent = repo;
   document.getElementById('project-title').textContent = repo;
 
   const arr = PROJECTS[repo];
   document.getElementById('project-subtitle').textContent = `${arr.length} commit${arr.length !== 1 ? 's' : ''} scanned`;
 
+  const optionsHtml = arr.map((e, i) => `<option value="${i}">${(e.commit||'').slice(0,7)} — ${e.branch||''} — ${e.timestamp||''}</option>`).reverse().join('');
   const select = document.getElementById('commit-select');
-  select.innerHTML = arr.map((e, i) => `<option value="${i}">${(e.commit || '').slice(0,7)} — ${e.branch || ''} — ${e.timestamp || ''}</option>`).reverse().join('');
-  select.onchange = () => renderProjectDetail(repo, arr[select.value]);
+  select.innerHTML = optionsHtml;
+  select.onchange = () => renderProjectDetail(arr[select.value]);
+
+  document.getElementById('diff-base-select').innerHTML = optionsHtml;
+  document.getElementById('diff-target-select').innerHTML = optionsHtml;
+  document.getElementById('diff-results').innerHTML = '<div class="empty-state">Pick a base and target commit, then click Compare.</div>';
 
   renderTrendChart(arr);
-  renderProjectDetail(repo, arr[arr.length - 1]);
+  renderProjectDetail(arr[arr.length - 1]);
 }
 
 function renderTrendChart(arr) {
@@ -382,58 +583,164 @@ function renderTrendChart(arr) {
   });
 }
 
-function renderProjectDetail(repo, entry) {
-  const s = (entry && entry.summary) || {};
-  const components = s.components || [];
+let currentEntry = null;
+let filters = { components: '', vulnerabilities: '', licenses: '', snippets: '' };
+let tableSorts = { components: {key:'component',dir:1}, vulnerabilities: {key:'severity',dir:1}, licenses: {key:'count',dir:-1}, snippets: {key:'match',dir:-1} };
 
+function renderProjectDetail(entry) {
+  currentEntry = entry;
+  const s = (entry && entry.summary) || {};
   const risk = riskLabel(riskScore(s));
   const cards = [
     { label: 'Components', value: s.component_count ?? 0 },
-    { label: 'Vulnerabilities', value: s.vulnerability_count ?? 0, cls: (s.vulnerability_count || 0) > 0 ? 'crit' : '' },
+    { label: 'Vulnerabilities', value: s.vulnerability_count ?? 0, cls: (s.vulnerability_count||0) > 0 ? 'crit' : '' },
     { label: 'Avg snippet match', value: (s.avg_snippet_match_pct ?? 0) + '%' },
     { label: 'Risk level', value: risk.text, cls: risk.cls === 'crit' ? 'crit' : (risk.cls === 'medium' ? 'warn' : '') },
   ];
   document.getElementById('project-metrics').innerHTML = cards.map(c => `
-    <div class="metric-card ${c.cls || ''}">
-      <div class="m-label">${c.label}</div>
-      <div class="m-value">${c.value}</div>
-    </div>
+    <div class="metric-card ${c.cls||''}"><div class="m-label">${c.label}</div><div class="m-value">${c.value}</div></div>
   `).join('');
 
-  document.getElementById('components-tbody').innerHTML = components.length ? components.map(c => `
+  renderComponentsTab();
+  renderVulnsTab();
+  renderLicensesTab();
+  renderSnippetsTab();
+}
+
+function renderComponentsTab() {
+  const components = (currentEntry?.summary?.components || []);
+  let rows = components.filter(c => c.component.toLowerCase().includes(filters.components));
+  const { key, dir } = tableSorts.components;
+  rows = rows.slice().sort((a, b) => {
+    if (key === 'match') return ((a.max_match_pct||0) - (b.max_match_pct||0)) * dir;
+    if (key === 'version') return String(a.version).localeCompare(String(b.version)) * dir;
+    return String(a.component).localeCompare(String(b.component)) * dir;
+  });
+  document.getElementById('components-tbody').innerHTML = rows.length ? rows.map(c => `
     <tr>
       <td>${c.component}</td>
       <td class="mono">${c.version}</td>
-      <td>${(c.licenses || []).map(l => `<span class="chip license">${l}</span>`).join(' ') || '—'}</td>
+      <td>${(c.licenses||[]).map(l => `<span class="chip license">${l}</span>`).join(' ') || '—'}</td>
       <td>${c.max_match_pct ?? 0}%</td>
     </tr>
-  `).join('') : `<tr><td colspan="4" class="empty-state">No components recorded for this commit.</td></tr>`;
+  `).join('') : `<tr><td colspan="4" class="empty-state">No matching components.</td></tr>`;
+}
 
-  const vulnRows = [];
-  components.forEach(c => {
-    (c.vulnerabilities || []).forEach(v => {
-      vulnRows.push({ id: v.id, severity: v.severity, component: c.component, version: c.version });
-    });
+function renderVulnsTab() {
+  const components = (currentEntry?.summary?.components || []);
+  let rows = [];
+  components.forEach(c => (c.vulnerabilities||[]).forEach(v => rows.push({ id: v.id, severity: v.severity, component: c.component, version: c.version })));
+  rows = rows.filter(v => v.id.toLowerCase().includes(filters.vulnerabilities) || v.component.toLowerCase().includes(filters.vulnerabilities));
+  const { key, dir } = tableSorts.vulnerabilities;
+  const sevOrder = { critical:0, high:1, medium:2, low:3, unknown:4 };
+  rows.sort((a,b) => {
+    if (key === 'severity') return ((sevOrder[(a.severity||'unknown').toLowerCase()]??4) - (sevOrder[(b.severity||'unknown').toLowerCase()]??4)) * dir;
+    return String(a[key]||'').localeCompare(String(b[key]||'')) * dir;
   });
-  document.getElementById('vulns-tbody').innerHTML = vulnRows.length ? vulnRows.map(v => `
+  document.getElementById('vulns-tbody').innerHTML = rows.length ? rows.map(v => `
     <tr>
       <td class="mono">${v.id}</td>
-      <td><span class="chip ${(v.severity || 'unknown').toLowerCase()}">${v.severity}</span></td>
+      <td><span class="chip ${(v.severity||'unknown').toLowerCase()}">${v.severity}</span></td>
       <td>${v.component}</td>
       <td class="mono">${v.version}</td>
     </tr>
   `).join('') : `<tr><td colspan="4" class="empty-state">No known vulnerabilities for this commit.</td></tr>`;
+}
 
-  const licenseCounts = s.license_counts || {};
-  const licRows = Object.entries(licenseCounts);
-  document.getElementById('licenses-tbody').innerHTML = licRows.length ? licRows.map(([lic, count]) => `
-    <tr><td><span class="chip license">${lic}</span></td><td>${count}</td></tr>
-  `).join('') : `<tr><td colspan="2" class="empty-state">No license data for this commit.</td></tr>`;
+function renderLicensesTab() {
+  const s = currentEntry?.summary || {};
+  const policy = document.getElementById('license-policy-select').value;
+  let rows = Object.entries(s.license_counts || {}).map(([lic, count]) => {
+    const category = licenseCategory(lic);
+    return { license: lic, category, count, status: licensePolicyStatus(category, policy) };
+  });
+  rows = rows.filter(r => r.license.toLowerCase().includes(filters.licenses));
+  const { key, dir } = tableSorts.licenses;
+  rows.sort((a,b) => typeof a[key] === 'number' ? (a[key]-b[key])*dir : String(a[key]).localeCompare(String(b[key]))*dir);
 
-  document.getElementById('snippets-tbody').innerHTML = components.length ? components
-    .slice().sort((a, b) => (b.max_match_pct || 0) - (a.max_match_pct || 0))
-    .map(c => `<tr><td>${c.component}</td><td class="mono">${c.version}</td><td>${c.max_match_pct ?? 0}%</td></tr>`)
-    .join('') : `<tr><td colspan="3" class="empty-state">No snippet-match data for this commit.</td></tr>`;
+  document.getElementById('licenses-tbody').innerHTML = rows.length ? rows.map(r => `
+    <tr>
+      <td><span class="chip license">${r.license}</span></td>
+      <td>${r.category}</td>
+      <td>${r.count}</td>
+      <td><span class="chip ${r.status}">${r.status === 'ok' ? 'OK' : 'Flagged'}</span></td>
+    </tr>
+  `).join('') : `<tr><td colspan="4" class="empty-state">No license data for this commit.</td></tr>`;
+}
+
+function renderSnippetsTab() {
+  const components = (currentEntry?.summary?.components || []);
+  let rows = components.filter(c => c.component.toLowerCase().includes(filters.snippets));
+  const { key, dir } = tableSorts.snippets;
+  rows = rows.slice().sort((a,b) => key === 'match' ? ((a.max_match_pct||0)-(b.max_match_pct||0))*dir : String(a.component).localeCompare(String(b.component))*dir);
+  document.getElementById('snippets-tbody').innerHTML = rows.length ? rows.map(c => `
+    <tr><td>${c.component}</td><td class="mono">${c.version}</td><td>${c.max_match_pct ?? 0}%</td></tr>
+  `).join('') : `<tr><td colspan="3" class="empty-state">No snippet-match data.</td></tr>`;
+}
+
+/* ---------- Commit diff ---------- */
+
+function keyOf(c) { return `${c.component}@${c.version}`; }
+
+function runDiff() {
+  const arr = PROJECTS[currentRepo];
+  const baseIdx = document.getElementById('diff-base-select').value;
+  const targetIdx = document.getElementById('diff-target-select').value;
+  if (baseIdx === '' || targetIdx === '') return;
+  const base = arr[baseIdx], target = arr[targetIdx];
+  const baseComps = new Map((base.summary?.components||[]).map(c => [keyOf(c), c]));
+  const targetComps = new Map((target.summary?.components||[]).map(c => [keyOf(c), c]));
+
+  const added = [], removed = [], versionChanged = [];
+  targetComps.forEach((c, k) => { if (!baseComps.has(k)) added.push(c); });
+  baseComps.forEach((c, k) => { if (!targetComps.has(k)) removed.push(c); });
+  // detect version bumps: same component name, different version present in both added & removed
+  const addedByName = new Map(added.map(c => [c.component, c]));
+  const removedByName = new Map(removed.map(c => [c.component, c]));
+  addedByName.forEach((newC, name) => {
+    if (removedByName.has(name)) {
+      versionChanged.push({ component: name, from: removedByName.get(name).version, to: newC.version });
+    }
+  });
+
+  const baseVulnIds = new Set();
+  (base.summary?.components||[]).forEach(c => (c.vulnerabilities||[]).forEach(v => baseVulnIds.add(v.id)));
+  const targetVulnIds = new Set();
+  (target.summary?.components||[]).forEach(c => (c.vulnerabilities||[]).forEach(v => targetVulnIds.add(v.id)));
+  const newVulns = [...targetVulnIds].filter(id => !baseVulnIds.has(id));
+  const resolvedVulns = [...baseVulnIds].filter(id => !targetVulnIds.has(id));
+
+  document.getElementById('diff-results').innerHTML = `
+    <div class="diff-grid">
+      <div class="diff-col">
+        <h3>Components added (${added.length})</h3>
+        ${added.length ? added.map(c => `<div class="diff-item"><span class="chip added">+</span> ${c.component} <span class="mono">${c.version}</span></div>`).join('') : '<div class="empty-state">None</div>'}
+      </div>
+      <div class="diff-col">
+        <h3>Components removed (${removed.length})</h3>
+        ${removed.length ? removed.map(c => `<div class="diff-item"><span class="chip removed">−</span> ${c.component} <span class="mono">${c.version}</span></div>`).join('') : '<div class="empty-state">None</div>'}
+      </div>
+      <div class="diff-col">
+        <h3>Version changes (${versionChanged.length})</h3>
+        ${versionChanged.length ? versionChanged.map(c => `<div class="diff-item"><span class="chip changed">~</span> ${c.component} <span class="mono">${c.from} → ${c.to}</span></div>`).join('') : '<div class="empty-state">None</div>'}
+      </div>
+      <div class="diff-col">
+        <h3>Vulnerability changes</h3>
+        ${newVulns.length ? newVulns.map(id => `<div class="diff-item"><span class="chip crit">new</span> ${id}</div>`).join('') : ''}
+        ${resolvedVulns.length ? resolvedVulns.map(id => `<div class="diff-item"><span class="chip ok">resolved</span> ${id}</div>`).join('') : ''}
+        ${(!newVulns.length && !resolvedVulns.length) ? '<div class="empty-state">No vulnerability changes</div>' : ''}
+      </div>
+    </div>
+  `;
+}
+
+/* ---------- Nav / tabs wiring ---------- */
+
+function switchNav(view) {
+  document.getElementById('view-portfolio').style.display = view === 'portfolio' ? 'block' : 'none';
+  document.getElementById('view-toprisks').style.display = view === 'toprisks' ? 'block' : 'none';
+  document.getElementById('view-project').style.display = view === 'project' ? 'block' : 'none';
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.nav === view));
 }
 
 function setupTabs() {
@@ -447,24 +754,61 @@ function setupTabs() {
   });
 }
 
-document.getElementById('back-to-portfolio').addEventListener('click', () => {
-  document.getElementById('view-project').style.display = 'none';
-  document.getElementById('view-portfolio').style.display = 'block';
-});
-
-document.querySelectorAll('.nav-item').forEach(item => {
-  item.addEventListener('click', () => {
-    document.getElementById('view-project').style.display = 'none';
-    document.getElementById('view-portfolio').style.display = 'block';
-  });
-});
-
 (async function init() {
   setupTabs();
   HISTORY = await loadHistory();
   PROJECTS = groupByProject(HISTORY);
-  renderPortfolioMetrics(HISTORY, PROJECTS);
-  renderProjectsTable(PROJECTS);
+
+  renderPortfolioMetrics(PROJECTS);
+  renderProjectsTable();
+  renderTopRisks();
+
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => switchNav(item.dataset.nav));
+  });
+  document.getElementById('back-to-portfolio').addEventListener('click', () => switchNav('portfolio'));
+
+  attachSearch('portfolio-search', v => { portfolioFilter = v; renderProjectsTable(); });
+  attachSort('#projects-table', 'projects', (key, dir) => { portfolioSort = { key, dir }; renderProjectsTable(); });
+
+  attachSearch('toprisks-search', v => { topRisksFilter = v; renderTopRisks(); });
+  attachSort('#toprisks-table', 'toprisks', (key, dir) => { topRisksSort = { key, dir }; renderTopRisks(); });
+  document.getElementById('export-toprisks-csv').addEventListener('click', () => {
+    downloadCSV('top-risks.csv', getAllLatestComponents(), ['component','version','project','license','vulns','score']);
+  });
+
+  attachSearch('components-search', v => { filters.components = v; renderComponentsTab(); });
+  attachSort('#tab-components table', 'components', (key, dir) => { tableSorts.components = {key, dir: dir}; renderComponentsTab(); });
+  document.getElementById('export-components-csv').addEventListener('click', () => {
+    const rows = (currentEntry?.summary?.components||[]).map(c => ({ component: c.component, version: c.version, licenses: (c.licenses||[]).join('; '), match: c.max_match_pct }));
+    downloadCSV(`${currentRepo}-components.csv`, rows, ['component','version','licenses','match']);
+  });
+
+  attachSearch('vulns-search', v => { filters.vulnerabilities = v; renderVulnsTab(); });
+  attachSort('#tab-vulnerabilities table', 'vulnerabilities', (key, dir) => { tableSorts.vulnerabilities = {key, dir}; renderVulnsTab(); });
+  document.getElementById('export-vulns-csv').addEventListener('click', () => {
+    const rows = [];
+    (currentEntry?.summary?.components||[]).forEach(c => (c.vulnerabilities||[]).forEach(v => rows.push({ id: v.id, severity: v.severity, component: c.component, version: c.version })));
+    downloadCSV(`${currentRepo}-vulnerabilities.csv`, rows, ['id','severity','component','version']);
+  });
+
+  attachSearch('licenses-search', v => { filters.licenses = v; renderLicensesTab(); });
+  document.getElementById('license-policy-select').addEventListener('change', renderLicensesTab);
+  document.getElementById('export-licenses-csv').addEventListener('click', () => {
+    const policy = document.getElementById('license-policy-select').value;
+    const rows = Object.entries(currentEntry?.summary?.license_counts||{}).map(([lic,count]) => ({ license: lic, category: licenseCategory(lic), count, status: licensePolicyStatus(licenseCategory(lic), policy) }));
+    downloadCSV(`${currentRepo}-licenses.csv`, rows, ['license','category','count','status']);
+  });
+
+  attachSearch('snippets-search', v => { filters.snippets = v; renderSnippetsTab(); });
+  attachSort('#tab-snippets table', 'snippets', (key, dir) => { tableSorts.snippets = {key, dir}; renderSnippetsTab(); });
+  document.getElementById('export-snippets-csv').addEventListener('click', () => {
+    const rows = (currentEntry?.summary?.components||[]).map(c => ({ component: c.component, version: c.version, match: c.max_match_pct }));
+    downloadCSV(`${currentRepo}-snippet-matches.csv`, rows, ['component','version','match']);
+  });
+
+  document.getElementById('run-diff-btn').addEventListener('click', runDiff);
+  document.getElementById('export-project-pdf').addEventListener('click', () => window.print());
 })();
 </script>
 
