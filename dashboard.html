@@ -93,6 +93,9 @@
   .chip.quantum-vulnerable { background: rgba(248,81,73,0.15); color: var(--crit); }
   .chip.quantum-safe { background: rgba(63,185,80,0.15); color: #3fb950; }
   .chip.review { background: rgba(227,179,65,0.15); color: var(--med); }
+  .chip.file { background: rgba(88,166,255,0.12); color: var(--low); }
+  .chip.snippet { background: rgba(227,179,65,0.15); color: var(--med); }
+  .chip.url, .chip.binary { background: rgba(125,133,144,0.15); color: var(--muted); }
 
   /* Cryptography section: scoped violet theme. Overriding --accent inside
      this wrapper retints every element that already reads var(--accent)
@@ -277,7 +280,7 @@
       <button class="tab-btn active" data-tab="components">Components</button>
       <button class="tab-btn" data-tab="vulnerabilities">Vulnerabilities</button>
       <button class="tab-btn" data-tab="licenses">Licenses</button>
-      <button class="tab-btn" data-tab="snippets">Snippet matching</button>
+      <button class="tab-btn" data-tab="snippets">File / Snippet Matching</button>
       <button class="tab-btn" data-tab="crypto">Cryptography</button>
       <button class="tab-btn" data-tab="diff">Compare commits</button>
     </div>
@@ -292,7 +295,8 @@
           <th data-key="component">Component <span class="sort-arrow"></span></th>
           <th data-key="version">Version <span class="sort-arrow"></span></th>
           <th data-key="licenses">License(s)</th>
-          <th data-key="match">Snippet match <span class="sort-arrow"></span></th>
+          <th data-key="matchtype">Match type</th>
+          <th data-key="match">Match % <span class="sort-arrow"></span></th>
         </tr></thead>
         <tbody id="components-tbody"></tbody>
       </table>
@@ -336,6 +340,9 @@
     </div>
 
     <div class="tab-panel" id="tab-snippets">
+      <div style="color: var(--muted); font-size: 12.5px; margin-bottom: 12px;">
+        <strong>File</strong> = exact whole-file match against a known file (100% is expected and correct here). <strong>Snippet</strong> = a partial fragment matched a known file (percentage reflects how much of the file matched).
+      </div>
       <div class="panel-title">
         <input type="text" class="search-input" id="snippets-search" placeholder="Search components…">
         <button class="btn" id="export-snippets-csv">Export CSV</button>
@@ -344,6 +351,7 @@
         <thead><tr>
           <th data-key="component">Component <span class="sort-arrow"></span></th>
           <th data-key="version">Version</th>
+          <th data-key="matchtype">Match type <span class="sort-arrow"></span></th>
           <th data-key="match">Match % <span class="sort-arrow"></span></th>
         </tr></thead>
         <tbody id="snippets-tbody"></tbody>
@@ -660,7 +668,7 @@ function renderProjectDetail(entry) {
   const cards = [
     { label: 'Components', value: s.component_count ?? 0 },
     { label: 'Vulnerabilities', value: s.vulnerability_count ?? 0, cls: (s.vulnerability_count||0) > 0 ? 'crit' : '' },
-    { label: 'Avg snippet match', value: (s.avg_snippet_match_pct ?? 0) + '%' },
+    { label: 'Avg match %', value: (s.avg_snippet_match_pct ?? 0) + '%' },
     { label: 'Risk level', value: risk.text, cls: risk.cls === 'crit' ? 'crit' : (risk.cls === 'medium' ? 'warn' : '') },
   ];
   document.getElementById('project-metrics').innerHTML = cards.map(c => `
@@ -680,6 +688,7 @@ function renderComponentsTab() {
   const { key, dir } = tableSorts.components;
   rows = rows.slice().sort((a, b) => {
     if (key === 'match') return ((a.max_match_pct||0) - (b.max_match_pct||0)) * dir;
+    if (key === 'matchtype') return String(a.match_type_label||'').localeCompare(String(b.match_type_label||'')) * dir;
     if (key === 'version') return String(a.version).localeCompare(String(b.version)) * dir;
     return String(a.component).localeCompare(String(b.component)) * dir;
   });
@@ -688,9 +697,10 @@ function renderComponentsTab() {
       <td>${c.component}</td>
       <td class="mono">${c.version}</td>
       <td>${(c.licenses||[]).map(l => `<span class="chip license">${l}</span>`).join(' ') || '—'}</td>
+      <td><span class="chip ${c.match_type_label||'unknown'}">${c.match_type_label||'unknown'}</span></td>
       <td>${c.max_match_pct ?? 0}%</td>
     </tr>
-  `).join('') : `<tr><td colspan="4" class="empty-state">No matching components.</td></tr>`;
+  `).join('') : `<tr><td colspan="5" class="empty-state">No matching components.</td></tr>`;
 }
 
 function renderVulnsTab() {
@@ -739,10 +749,19 @@ function renderSnippetsTab() {
   const components = (currentEntry?.summary?.components || []);
   let rows = components.filter(c => c.component.toLowerCase().includes(filters.snippets));
   const { key, dir } = tableSorts.snippets;
-  rows = rows.slice().sort((a,b) => key === 'match' ? ((a.max_match_pct||0)-(b.max_match_pct||0))*dir : String(a.component).localeCompare(String(b.component))*dir);
+  rows = rows.slice().sort((a,b) => {
+    if (key === 'match') return ((a.max_match_pct||0)-(b.max_match_pct||0))*dir;
+    if (key === 'matchtype') return String(a.match_type_label||'').localeCompare(String(b.match_type_label||'')) * dir;
+    return String(a.component).localeCompare(String(b.component))*dir;
+  });
   document.getElementById('snippets-tbody').innerHTML = rows.length ? rows.map(c => `
-    <tr><td>${c.component}</td><td class="mono">${c.version}</td><td>${c.max_match_pct ?? 0}%</td></tr>
-  `).join('') : `<tr><td colspan="3" class="empty-state">No snippet-match data.</td></tr>`;
+    <tr>
+      <td>${c.component}</td>
+      <td class="mono">${c.version}</td>
+      <td><span class="chip ${c.match_type_label||'unknown'}">${c.match_type_label||'unknown'}</span></td>
+      <td>${c.max_match_pct ?? 0}%</td>
+    </tr>
+  `).join('') : `<tr><td colspan="4" class="empty-state">No match data.</td></tr>`;
 }
 
 /* ---------- Commit diff ---------- */
@@ -947,8 +966,8 @@ function setupTabs() {
   attachSearch('components-search', v => { filters.components = v; renderComponentsTab(); });
   attachSort('#tab-components table', 'components', (key, dir) => { tableSorts.components = {key, dir: dir}; renderComponentsTab(); });
   document.getElementById('export-components-csv').addEventListener('click', () => {
-    const rows = (currentEntry?.summary?.components||[]).map(c => ({ component: c.component, version: c.version, licenses: (c.licenses||[]).join('; '), match: c.max_match_pct }));
-    downloadCSV(`${currentRepo}-components.csv`, rows, ['component','version','licenses','match']);
+    const rows = (currentEntry?.summary?.components||[]).map(c => ({ component: c.component, version: c.version, licenses: (c.licenses||[]).join('; '), match_type: c.match_type_label, match: c.max_match_pct }));
+    downloadCSV(`${currentRepo}-components.csv`, rows, ['component','version','licenses','match_type','match']);
   });
 
   attachSearch('vulns-search', v => { filters.vulnerabilities = v; renderVulnsTab(); });
@@ -970,8 +989,8 @@ function setupTabs() {
   attachSearch('snippets-search', v => { filters.snippets = v; renderSnippetsTab(); });
   attachSort('#tab-snippets table', 'snippets', (key, dir) => { tableSorts.snippets = {key, dir}; renderSnippetsTab(); });
   document.getElementById('export-snippets-csv').addEventListener('click', () => {
-    const rows = (currentEntry?.summary?.components||[]).map(c => ({ component: c.component, version: c.version, match: c.max_match_pct }));
-    downloadCSV(`${currentRepo}-snippet-matches.csv`, rows, ['component','version','match']);
+    const rows = (currentEntry?.summary?.components||[]).map(c => ({ component: c.component, version: c.version, match_type: c.match_type_label, match: c.max_match_pct }));
+    downloadCSV(`${currentRepo}-file-snippet-matches.csv`, rows, ['component','version','match_type','match']);
   });
 
   attachSearch('crypto-project-search', v => { cryptoProjectFilter = v; renderCryptoProjectTab(); });
