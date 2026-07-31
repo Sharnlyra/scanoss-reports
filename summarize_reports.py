@@ -31,14 +31,31 @@ def load_json(path):
 def extract_summary(results):
     """
     Reduce a raw SCANOSS results.json into a flat summary:
-      - component list (name, version, licenses, vulnerabilities, match %)
+      - component list (name, version, licenses, vulnerabilities, match %,
+        and match type)
       - aggregate counts (by license, by vuln severity)
     Handles the common case where results.json is a dict keyed by file path,
     each value a list of match objects.
+
+    SCANOSS classifies every match with an "id" field indicating HOW it was
+    matched, per the engine docs (docs.scanoss.com -> Scanning a File or
+    Directory):
+      "url"     - exact match against a known package archive URL
+      "file"    - exact whole-file match (file MD5 found in the KB) --
+                  these legitimately show matched: "100%", since the whole
+                  file is identical to a known one
+      "snippet" - partial match: a fragment of the file matched a fragment
+                  of a known file -- this is where matched: "NN%" is
+                  meaningful as a *partial* match percentage
+      "binary"  - binary fingerprint match
+      "none"    - no match found
+    Treating every match as a "snippet match" (as an earlier version of
+    this script did) is misleading: a component showing 100% is very
+    likely an exact "file" match, not a partial snippet match.
     """
     components = {}
 
-    def add_component(comp_name, version, licenses, vulns, match_pct):
+    def add_component(comp_name, version, licenses, vulns, match_pct, match_type):
         key = f"{comp_name}@{version}"
         if key not in components:
             components[key] = {
@@ -47,6 +64,7 @@ def extract_summary(results):
                 "licenses": set(),
                 "vulnerabilities": [],
                 "max_match_pct": 0,
+                "match_types": set(),
             }
         entry = components[key]
         entry["licenses"].update(licenses)
@@ -54,6 +72,7 @@ def extract_summary(results):
             if v not in entry["vulnerabilities"]:
                 entry["vulnerabilities"].append(v)
         entry["max_match_pct"] = max(entry["max_match_pct"], match_pct)
+        entry["match_types"].add(match_type)
 
     if isinstance(results, dict):
         for _file_path, matches in results.items():
@@ -66,6 +85,7 @@ def extract_summary(results):
                     or match.get("vendor", "")
                 )
                 version = match.get("version", "unknown")
+                match_type = match.get("id", "unknown")  # "file" / "snippet" / "url" / "binary" / "none"
 
                 licenses_raw = match.get("licenses", [])
                 licenses = []
@@ -93,12 +113,22 @@ def extract_summary(results):
                     match_pct = 0.0
 
                 if comp_name:
-                    add_component(comp_name, version, licenses, vulns, match_pct)
+                    add_component(comp_name, version, licenses, vulns, match_pct, match_type)
 
     # finalize sets -> lists
     component_list = []
     for entry in components.values():
         entry["licenses"] = sorted(entry["licenses"])
+        entry["match_types"] = sorted(entry["match_types"])
+        # A single, human-readable label for the dashboard: if the
+        # component was ever matched as a whole file, call it "file";
+        # otherwise fall back to whatever type(s) were seen.
+        if "file" in entry["match_types"]:
+            entry["match_type_label"] = "file"
+        elif "snippet" in entry["match_types"]:
+            entry["match_type_label"] = "snippet"
+        else:
+            entry["match_type_label"] = entry["match_types"][0] if entry["match_types"] else "unknown"
         component_list.append(entry)
 
     severity_counts = {}
@@ -112,6 +142,10 @@ def extract_summary(results):
         for lic in c["licenses"]:
             license_counts[lic] = license_counts.get(lic, 0) + 1
 
+    match_type_counts = {}
+    for c in component_list:
+        match_type_counts[c["match_type_label"]] = match_type_counts.get(c["match_type_label"], 0) + 1
+
     avg_match_pct = (
         sum(c["max_match_pct"] for c in component_list) / len(component_list)
         if component_list
@@ -123,6 +157,7 @@ def extract_summary(results):
         "vulnerability_count": sum(len(c["vulnerabilities"]) for c in component_list),
         "severity_counts": severity_counts,
         "license_counts": license_counts,
+        "match_type_counts": match_type_counts,
         "avg_snippet_match_pct": round(avg_match_pct, 2),
         "components": component_list,
     }
