@@ -1,0 +1,134 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:bdab4cd9-2e92-44fa-bea1-1ab2d458915d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-04T06:53:42Z",
+    "tools": [
+      {
+        "vendor": "SCANOSS",
+        "name": "scanoss-py",
+        "version": "1.54.2"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "NOASSERTION",
+      "version": "NOASSERTION"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "client-encryption-java",
+      "publisher": "Mastercard",
+      "version": "v1.8.0",
+      "purl": "pkg:github/mastercard/client-encryption-java",
+      "bom-ref": "pkg:github/mastercard/client-encryption-java",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sage",
+      "publisher": "SAGE-X-project",
+      "version": "v1.0.3",
+      "purl": "pkg:github/sage-x-project/sage",
+      "bom-ref": "pkg:github/sage-x-project/sage",
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chili-core",
+      "publisher": "codingchili",
+      "version": "1.0.4",
+      "purl": "pkg:github/codingchili/chili-core",
+      "bom-ref": "pkg:github/codingchili/chili-core",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "Aegis",
+      "publisher": "beemdevelopment",
+      "version": "v2.1",
+      "purl": "pkg:github/beemdevelopment/aegis",
+      "bom-ref": "pkg:github/beemdevelopment/aegis",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "client-encryption-csharp",
+      "publisher": "mastercard",
+      "version": "v1.0.0",
+      "purl": "pkg:github/mastercard/client-encryption-csharp",
+      "bom-ref": "pkg:github/mastercard/client-encryption-csharp",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "oauth1-signer-java",
+      "publisher": "Mastercard",
+      "version": "1.1.0",
+      "purl": "pkg:github/mastercard/oauth1-signer-java",
+      "bom-ref": "pkg:github/mastercard/oauth1-signer-java",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mockito-kotlin",
+      "publisher": "mockito",
+      "version": "2.0.0-alpha03",
+      "purl": "pkg:github/mockito/mockito-kotlin",
+      "bom-ref": "pkg:github/mockito/mockito-kotlin",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": []
+}

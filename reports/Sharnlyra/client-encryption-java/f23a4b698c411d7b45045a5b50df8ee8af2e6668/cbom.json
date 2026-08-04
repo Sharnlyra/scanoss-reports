@@ -1,0 +1,1247 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ff38e40c-6009-46ae-aa55-a111415aab13",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-04T06:54:15Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "SCANOSS",
+          "name": "crypto-finder",
+          "version": "0.16.0"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "65e7365d-9f98-4919-bc82-80fb114245c1",
+      "type": "cryptographic-asset",
+      "name": "AES-CBC-PKCS5Padding",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.block-cipher.aes.java.jca.algorithm.block-cipher.aes"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/aes/AESCBC.java",
+            "line": 31,
+            "additionalContext": "scanoss:match,Cipher cipher = Cipher.getInstance(CYPHER);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "mode": "cbc",
+          "padding": "PKCS5Padding"
+        },
+        "oid": "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "bom-ref": "281ed691-8cd0-4316-83b6-85bd02371b64",
+      "type": "cryptographic-asset",
+      "name": "AES-GCM-NoPadding",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.ae.aes-gcm.java.jca.algorithm.ae.aes-gcm"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/aes/AESGCM.java",
+            "line": 29,
+            "additionalContext": "scanoss:match,Cipher cipher = Cipher.getInstance(CYPHER);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ae",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "mode": "gcm",
+          "padding": "NoPadding"
+        },
+        "oid": "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "bom-ref": "3dd6fa99-8b74-488f-8d6a-1753ca2a51de",
+      "type": "cryptographic-asset",
+      "name": "AES-SIV",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.algorithm.ae.aes-siv.java.bouncycastle.algorithm.ae.aes-siv"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 98,
+            "additionalContext": "scanoss:match,Cipher cipher = Cipher.getInstance(\"AES/SIV/NoPadding\", \"BC\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ae",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "mode": "siv",
+          "padding": "NoPadding"
+        },
+        "oid": "2.16.840.1.101.3.4.1"
+      }
+    },
+    {
+      "bom-ref": "d8e54384-a55c-4b50-b55e-ceb7343f13f8",
+      "type": "cryptographic-asset",
+      "name": "BLAKE2b-256",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "digest"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.algorithm.hash.blake2.java.bouncycastle.algorithm.hash.blake2b-lightweight"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 50,
+            "additionalContext": "scanoss:match,Blake2bDigest digest = new Blake2bDigest(256);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "b3548839-0199-4209-8384-91f49a676a8e",
+      "type": "cryptographic-asset",
+      "name": "ChaCha20",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.algorithm.stream-cipher.chacha20.java.bouncycastle.algorithm.stream-cipher.chacha20"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 89,
+            "additionalContext": "scanoss:match,Cipher cipher = Cipher.getInstance(\"ChaCha20\", \"BC\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "stream-cipher",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64"
+        }
+      }
+    },
+    {
+      "bom-ref": "f87a5be8-8a94-49bb-b84d-6b49d7748581",
+      "type": "cryptographic-asset",
+      "name": "ECDSA-SHA256",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.signature.ecdsa.java.jca.algorithm.signature.ecdsa"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+            "line": 37,
+            "additionalContext": "scanoss:match,Signature signature = Signature.getInstance(\"SHA256withECDSA\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+            "line": 45,
+            "additionalContext": "scanoss:match,Signature signature = Signature.getInstance(\"SHA256withECDSA\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64"
+        },
+        "oid": "1.2.840.10045.4.3.2"
+      }
+    },
+    {
+      "bom-ref": "550f9986-c2fe-4547-b5fc-6abb843ab3cc",
+      "type": "cryptographic-asset",
+      "name": "Ed25519",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.algorithm.signature.eddsa.java.bouncycastle.algorithm.signature.eddsa-ed25519"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.nimbus-jose-jwt.algorithm.signature.java.nimbus-jose-jwt.algorithm.signature.eddsa-signer"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 70,
+            "additionalContext": "scanoss:match,Ed25519Signer signer = new Ed25519Signer();"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 70,
+            "additionalContext": "scanoss:match,Ed25519Signer signer = new Ed25519Signer();"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64"
+        },
+        "oid": "1.3.101.112"
+      }
+    },
+    {
+      "bom-ref": "c85c404d-63a2-4fc4-b69f-8b39a18f4189",
+      "type": "cryptographic-asset",
+      "name": "HMAC-MD5",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "tag"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.mac.hmac.java.jca.algorithm.mac.hmac"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 38,
+            "additionalContext": "scanoss:match,Mac mac = Mac.getInstance(\"HmacMD5\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "tag"
+          ]
+        },
+        "oid": "1.2.840.113549.2.6"
+      }
+    },
+    {
+      "bom-ref": "df60a5c5-2ceb-463d-b551-e15cac7e835e",
+      "type": "cryptographic-asset",
+      "name": "HMAC-SHA-256",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "tag"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.commons-codec.algorithm.mac.hmacutils.java.commons-codec.algorithm.mac.hmacutils-sha"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 40,
+            "additionalContext": "scanoss:match,return new HmacUtils(HmacAlgorithms.HMAC_SHA_256, key).hmac(data);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 44,
+            "additionalContext": "scanoss:match,return new HmacUtils(HmacAlgorithms.HMAC_SHA_256, key).hmacHex(data);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 59,
+            "additionalContext": "scanoss:match,return new HmacUtils(HmacAlgorithms.HMAC_SHA_256, key).hmac(data);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 63,
+            "additionalContext": "scanoss:match,return new HmacUtils(HmacAlgorithms.HMAC_SHA_256, key).hmacHex(data);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "tag"
+          ]
+        },
+        "oid": "1.2.840.113549.2"
+      }
+    },
+    {
+      "bom-ref": "514b407b-c2ed-4bad-91d1-df2c776325c3",
+      "type": "cryptographic-asset",
+      "name": "HMAC-SHA-512",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "tag"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.commons-codec.algorithm.mac.hmacutils.java.commons-codec.algorithm.mac.hmacutils-sha"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 48,
+            "additionalContext": "scanoss:match,return new HmacUtils(HmacAlgorithms.HMAC_SHA_512, key).hmac(data);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "tag"
+          ]
+        },
+        "oid": "1.2.840.113549.2"
+      }
+    },
+    {
+      "bom-ref": "73e054c0-c224-4326-be90-08e911fb4182",
+      "type": "cryptographic-asset",
+      "name": "HMAC-SHA256",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "tag"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.mac.hmac.java.jca.algorithm.mac.hmac"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 19,
+            "additionalContext": "scanoss:match,Mac mac = Mac.getInstance(\"HmacSHA256\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "parameterSetIdentifier": "256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "tag"
+          ]
+        },
+        "oid": "1.2.840.113549.2.9"
+      }
+    },
+    {
+      "bom-ref": "35aad8cf-b3b8-48f8-986a-23130b4ad371",
+      "type": "cryptographic-asset",
+      "name": "HMAC-SHA512",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "tag"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.mac.hmac.java.jca.algorithm.mac.hmac"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 27,
+            "additionalContext": "scanoss:match,Mac mac = Mac.getInstance(\"HmacSHA512\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "parameterSetIdentifier": "512",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "tag"
+          ]
+        },
+        "oid": "1.2.840.113549.2.11"
+      }
+    },
+    {
+      "bom-ref": "dae80f55-f119-4814-8ee1-e863322536fc",
+      "type": "cryptographic-asset",
+      "name": "MD5",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "digest"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.commons-codec.algorithm.hash.digestutils.java.commons-codec.algorithm.hash.digestutils-md5"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 25,
+            "additionalContext": "scanoss:match,return DigestUtils.md5Hex(data);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "128",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "1.2.840.113549.2.5"
+      }
+    },
+    {
+      "bom-ref": "d34ec191-c34c-409e-bfc0-175623191bec",
+      "type": "cryptographic-asset",
+      "name": "PBKDF2",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "keyderive"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.kdf.pbkdf2.java.jca.algorithm.kdf.pbkdf2"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+            "line": 22,
+            "additionalContext": "scanoss:match,PBEKeySpec spec = new PBEKeySpec(password, salt, iterations, keyLength);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+            "line": 29,
+            "additionalContext": "scanoss:match,PBEKeySpec spec = new PBEKeySpec(password, salt, iterations, keyLength);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "kdf",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "keyderive"
+          ]
+        },
+        "oid": "1.2.840.113549.1.5.12"
+      }
+    },
+    {
+      "bom-ref": "112fc2f1-dbcb-48e8-bce3-2e1eaacb8dc9",
+      "type": "cryptographic-asset",
+      "name": "RSA-PKCS1-SHA256",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.signature.rsa.java.jca.algorithm.signature.rsa"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+            "line": 21,
+            "additionalContext": "scanoss:match,Signature signature = Signature.getInstance(\"SHA256withRSA\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+            "line": 29,
+            "additionalContext": "scanoss:match,Signature signature = Signature.getInstance(\"SHA256withRSA\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64"
+        },
+        "oid": "1.2.840.113549.1.1"
+      }
+    },
+    {
+      "bom-ref": "906653ef-1889-4150-b9ae-041f7bc1dfc1",
+      "type": "cryptographic-asset",
+      "name": "RSA-PSS",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.signature.rsa.java.jca.algorithm.signature.rsa-pss"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/signature/SignatureOperations.java",
+            "line": 54,
+            "additionalContext": "scanoss:match,Signature signature = Signature.getInstance(\"RSASSA-PSS\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64"
+        }
+      }
+    },
+    {
+      "bom-ref": "b8691fd4-4ee7-4913-855d-0f6b03a8824e",
+      "type": "cryptographic-asset",
+      "name": "SHA-1",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "digest"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.commons-codec.algorithm.hash.digestutils.java.commons-codec.algorithm.hash.digestutils-sha1"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 32,
+            "additionalContext": "scanoss:match,return DigestUtils.sha1Hex(data);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "160",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "1.3.14.3.2.26"
+      }
+    },
+    {
+      "bom-ref": "9bfd932f-c7ff-401b-a345-1380fe15ee8a",
+      "type": "cryptographic-asset",
+      "name": "SHA-256",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "digest"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.commons-codec.algorithm.hash.digestutils.java.commons-codec.algorithm.hash.digestutils-sha2"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.hash.sha-2.java.jca.algorithm.hash.sha-2"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 14,
+            "additionalContext": "scanoss:match,return DigestUtils.sha256Hex(data);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 36,
+            "additionalContext": "scanoss:match,return DigestUtils.sha256(data);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/EncryptionConfigBuilder.java",
+            "line": 51,
+            "additionalContext": "scanoss:match,MessageDigest messageDigest = MessageDigest.getInstance(\"SHA-256\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "2.16.840.1.101.3.4.2.1"
+      }
+    },
+    {
+      "bom-ref": "46f5eed4-180d-48d1-9835-8344fe1bd2b5",
+      "type": "cryptographic-asset",
+      "name": "SHA-512",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "digest"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.commons-codec.algorithm.hash.digestutils.java.commons-codec.algorithm.hash.digestutils-sha2"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/commons/CommonsCodecCrypto.java",
+            "line": 18,
+            "additionalContext": "scanoss:match,return DigestUtils.sha512Hex(data);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "512",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "2.16.840.1.101.3.4.2.3"
+      }
+    },
+    {
+      "bom-ref": "4e130e70-ac8b-4dbd-870f-e790ffe14cf1",
+      "type": "cryptographic-asset",
+      "name": "SHA1PRNG",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "generate"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.drbg.securerandom.java.jca.algorithm.drbg.securerandom"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/aes/AESEncryption.java",
+            "line": 19,
+            "additionalContext": "scanoss:match,SecureRandom secureRandom = SecureRandom.getInstance(\"SHA1PRNG\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "drbg",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "generate"
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "8a8d3666-aa76-4a33-abbd-91af5a68d1f0",
+      "type": "cryptographic-asset",
+      "name": "SHA3-256",
+      "properties": [
+        {
+          "name": "scanoss:cryptoFunction",
+          "value": "digest"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.algorithm.hash.sha-3.java.bouncycastle.algorithm.hash.sha-3-lightweight"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.algorithm.hash.sha-3.java.bouncycastle.algorithm.hash.sha-3"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.algorithm.hash.sha-3.java.jca.algorithm.hash.sha-3"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 39,
+            "additionalContext": "scanoss:match,SHA3Digest digest = new SHA3Digest(256);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 108,
+            "additionalContext": "scanoss:match,MessageDigest digest = MessageDigest.getInstance(\"SHA3-256\", \"BC\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 108,
+            "additionalContext": "scanoss:match,MessageDigest digest = MessageDigest.getInstance(\"SHA3-256\", \"BC\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "executionEnvironment": "software-plain-ram",
+          "implementationPlatform": "x86_64",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "2.16.840.1.101.3.4.2.8"
+      }
+    },
+    {
+      "bom-ref": "e2ea7c17-27e7-4455-8254-345843120528",
+      "type": "cryptographic-asset",
+      "name": "initialization-vector",
+      "description": "Cryptographic initialization-vector",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.related-crypto-material.initialization-vector.java.jca.related-crypto-material.initialization-vector.ivparameterspec"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.related-crypto-material.initialization-vector.java.jca.related-crypto-material.initialization-vector.gcmparameterspec"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/FieldLevelEncryptionParams.java",
+            "line": 103,
+            "additionalContext": "scanoss:match,ivParameterSpec = new IvParameterSpec(ivByteArray);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/aes/AESCBC.java",
+            "line": 27,
+            "additionalContext": "scanoss:match,return cipher(aesKey, new IvParameterSpec(iv), cipherText, Cipher.DECRYPT_MODE);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/aes/AESEncryption.java",
+            "line": 22,
+            "additionalContext": "scanoss:match,return new IvParameterSpec(ivBytes);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/aes/AESGCM.java",
+            "line": 23,
+            "additionalContext": "scanoss:match,GCMParameterSpec gcmSpec = new GCMParameterSpec(128, EncodingUtils.base64Decode(object.getIv()));"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/jwe/JweObject.java",
+            "line": 67,
+            "additionalContext": "scanoss:match,GCMParameterSpec gcmSpec = new GCMParameterSpec(128, iv);"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "initialization-vector"
+        }
+      }
+    },
+    {
+      "bom-ref": "c889442d-c037-4732-b908-f19d16a77ac2",
+      "type": "cryptographic-asset",
+      "name": "key",
+      "description": "Cryptographic key",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.related-crypto-material.key.java.jca.related-crypto-material.key.keypairgenerator-dsa-dh-ec"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.related-crypto-material.key.java.bouncycastle.related-crypto-material.key.ed25519-keygen-lightweight"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.related-crypto-material.key.java.bouncycastle.related-crypto-material.key.x25519-keygen-lightweight"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+            "line": 41,
+            "additionalContext": "scanoss:match,KeyPairGenerator generator = KeyPairGenerator.getInstance(\"EC\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/keyderivation/KeyDerivationOperations.java",
+            "line": 48,
+            "additionalContext": "scanoss:match,KeyPairGenerator generator = KeyPairGenerator.getInstance(\"DH\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 61,
+            "additionalContext": "scanoss:match,Ed25519KeyPairGenerator generator = new Ed25519KeyPairGenerator();"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 80,
+            "additionalContext": "scanoss:match,X25519KeyPairGenerator generator = new X25519KeyPairGenerator();"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "key"
+        }
+      }
+    },
+    {
+      "bom-ref": "1f0ebb41-c4d9-4f62-8b87-0ec7c3afc9e7",
+      "type": "cryptographic-asset",
+      "name": "secret-key",
+      "description": "Cryptographic secret-key",
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.related-crypto-material.secret-key.java.jca.related-crypto-material.secret-key.secretkeyspec"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.bouncycastle.related-crypto-material.key.java.bouncycastle.related-crypto-material.key.keygenerator"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.related-crypto-material.key.java.jca.related-crypto-material.key.keygenerator-init"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "scanoss:ruleid,java.jca.related-crypto-material.key.java.jca.related-crypto-material.key.keygenerator-symmetric"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 20,
+            "additionalContext": "scanoss:match,SecretKeySpec keySpec = new SecretKeySpec(key, \"HmacSHA256\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 28,
+            "additionalContext": "scanoss:match,SecretKeySpec keySpec = new SecretKeySpec(key, \"HmacSHA512\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/hmac/HmacOperations.java",
+            "line": 39,
+            "additionalContext": "scanoss:match,SecretKeySpec keySpec = new SecretKeySpec(key, \"HmacMD5\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 116,
+            "additionalContext": "scanoss:match,KeyGenerator keyGen = KeyGenerator.getInstance(\"ChaCha20\", \"BC\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/crypto/thirdparty/BouncyCastleCrypto.java",
+            "line": 117,
+            "additionalContext": "scanoss:match,keyGen.init(256);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/FieldLevelEncryptionParams.java",
+            "line": 112,
+            "additionalContext": "scanoss:match,KeyGenerator generator = KeyGenerator.getInstance(SYMMETRIC_KEY_TYPE);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/FieldLevelEncryptionParams.java",
+            "line": 113,
+            "additionalContext": "scanoss:match,generator.init(SYMMETRIC_KEY_SIZE);"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/aes/AESEncryption.java",
+            "line": 32,
+            "additionalContext": "scanoss:match,return new SecretKeySpec(cekMaterial, \"AES\");"
+          },
+          {
+            "location": "src/main/java/com/mastercard/developer/encryption/jwe/JweObject.java",
+            "line": 74,
+            "additionalContext": "scanoss:match,SecretKeySpec aesKey = new SecretKeySpec(cek.getEncoded(), \"AES\");"
+          }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "secret-key"
+        }
+      }
+    }
+  ]
+}
