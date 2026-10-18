@@ -25357,5 +25357,371 @@
         }
       ]
     }
+  },
+  {
+    "repo": "Sharnlyra/client-encryption-java",
+    "commit": "b015e250f37a4c35a9c12b0afae0ac4d611e2fe4",
+    "branch": "main",
+    "actor": "Sharnlyra",
+    "event": "push",
+    "timestamp": "2026-10-18T06:54:31Z",
+    "summary": {
+      "component_count": 26,
+      "vulnerability_count": 0,
+      "severity_counts": {},
+      "license_counts": {
+        "MIT": 25,
+        "EUPL-1.1": 1,
+        "GPL-3.0-only": 1,
+        "LGPL-3.0-only": 1
+      },
+      "match_type_counts": {
+        "snippet": 3,
+        "file": 23
+      },
+      "avg_snippet_match_pct": 94.23,
+      "components": [
+        {
+          "component": "chili-core",
+          "version": "1.0.4",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 68.0,
+          "match_types": [
+            "snippet"
+          ],
+          "match_type_label": "snippet"
+        },
+        {
+          "component": "security-for-flow",
+          "version": "v00.73.00",
+          "licenses": [
+            "EUPL-1.1"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 59.0,
+          "match_types": [
+            "snippet"
+          ],
+          "match_type_label": "snippet"
+        },
+        {
+          "component": "github.com/sage-x-project/sage",
+          "version": "v0.0.0-20251011101501-c91ee62d75bb",
+          "licenses": [
+            "GPL-3.0-only",
+            "LGPL-3.0-only",
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 23.0,
+          "match_types": [
+            "snippet"
+          ],
+          "match_type_label": "snippet"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.8.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "f91ae60",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.6.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "2d52be8",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.8.1",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.7.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.8.4",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.7.2",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.0.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.8.2",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.1.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.7.3",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "6ed5b10",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.2.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.8.6",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.7.7",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.7.6",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.3.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.3.3",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-java",
+          "version": "v1.8.3",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "client-encryption-csharp",
+          "version": "v1.0.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "oauth1-signer-java",
+          "version": "v1.1.0",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        },
+        {
+          "component": "mockito-kotlin",
+          "version": "2.0.0-alpha03",
+          "licenses": [
+            "MIT"
+          ],
+          "vulnerabilities": [],
+          "max_match_pct": 100.0,
+          "match_types": [
+            "file"
+          ],
+          "match_type_label": "file"
+        }
+      ]
+    }
   }
 ]
