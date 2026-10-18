@@ -1,0 +1,1277 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:4da58c62-a201-49b6-91af-e701a421d85d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-18T06:55:39Z",
+    "tools": [
+      {
+        "vendor": "SCANOSS",
+        "name": "scanoss-py",
+        "version": "1.54.2"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "NOASSERTION",
+      "version": "NOASSERTION"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "busybox",
+      "publisher": "mirror",
+      "version": "1_29_0",
+      "purl": "pkg:github/mirror/busybox",
+      "bom-ref": "pkg:github/mirror/busybox",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:busybox:busybox:1.29.0:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "library",
+      "name": "blueflops/blueflops-filesystem",
+      "publisher": "sourceforge.net",
+      "version": "1.1.0",
+      "purl": "pkg:sourceforge/blueflops/blueflops-filesystem",
+      "bom-ref": "pkg:sourceforge/blueflops/blueflops-filesystem",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "rsync",
+      "publisher": "rsyncproject",
+      "version": "v3.0.7pre2",
+      "purl": "pkg:github/rsyncproject/rsync",
+      "bom-ref": "pkg:github/rsyncproject/rsync",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rsync",
+      "publisher": "sailfishos-mirror",
+      "version": "v1.6.7",
+      "purl": "pkg:github/sailfishos-mirror/rsync",
+      "bom-ref": "pkg:github/sailfishos-mirror/rsync",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rsync",
+      "publisher": "wayned",
+      "version": "v3.0.7pre1",
+      "purl": "pkg:github/wayned/rsync",
+      "bom-ref": "pkg:github/wayned/rsync",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "log4j-api",
+      "publisher": "org.apache.logging.log4j",
+      "version": "2.3",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "j2eeunit/sample",
+      "publisher": "sourceforge.net",
+      "version": "0.1",
+      "purl": "pkg:sourceforge/j2eeunit/sample",
+      "bom-ref": "pkg:sourceforge/j2eeunit/sample",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "duck_hub_full",
+      "publisher": "matthewb66",
+      "version": "b4d5e43",
+      "purl": "pkg:github/matthewb66/duck_hub_full",
+      "bom-ref": "pkg:github/matthewb66/duck_hub_full",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "name": "log4j-core",
+      "publisher": "org.apache.logging.log4j",
+      "version": "2.1",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-core",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "NuGet.CommandLine",
+      "publisher": "nuget",
+      "version": "2.8.5",
+      "purl": "pkg:nuget/NuGet.CommandLine",
+      "bom-ref": "pkg:nuget/NuGet.CommandLine",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "LicenseRef-scancode-ms-nuget-package-manager"
+          }
+        },
+        {
+          "license": {
+            "name": "LicenseRef-scancode-unknown-license-reference"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rsync",
+      "publisher": "bettermirror",
+      "version": "v1.6.6",
+      "purl": "pkg:github/bettermirror/rsync",
+      "bom-ref": "pkg:github/bettermirror/rsync",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:samba:rsync:1.6.6:*:*:*:*:*:*:*"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2019-5747",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5747"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-20679",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-20679"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-1000500",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42376",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42376"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42374",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42379",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42378",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42382",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42384",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42385",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42386",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42381",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42380",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-28391",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-48174",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-46394",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-60876",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-28831",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28831"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2014-9645",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-9645"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-6301",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2013-1813",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-1813"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-2148",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2011-5325",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-5325"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2016-2147",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-1000517",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-16544",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2015-9261",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-9261"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2011-2716",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-2716"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/mirror/busybox"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p6xc-xr62-6r2g",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-p6xc-xr62-6r2g"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vc5p-v9hr-52mj",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-vc5p-v9hr-52mj"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fxph-q3j8-mv87",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-fxph-q3j8-mv87"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7rjr-3q55-vv33",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-7rjr-3q55-vv33"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3pxv-7cmr-fjr4",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-3pxv-7cmr-fjr4"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jfh8-c2jp-5v3q",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-jfh8-c2jp-5v3q"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8489-44mv-ggj8",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-8489-44mv-ggj8"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vwqq-5vrc-xw9h",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-vwqq-5vrc-xw9h"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2014-2855",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-2855"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-15994",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-15994"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-17434",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17434"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2002-0080",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0080"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-5764",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-5764"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-29154",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-29154"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-12088",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12088"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-12086",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12086"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-12087",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12087"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-12085",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12085"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-43617",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43617"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-43618",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43618"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-43619",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43619"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-43620",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43620"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-45232",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45232"
+      },
+      "ratings": [
+        {
+          "severity": "low"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-29518",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29518"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53784",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53784"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53786",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53786"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53789",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53789"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53791",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53791"
+      },
+      "ratings": [
+        {
+          "severity": "critical"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53795",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53795"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53797",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53797"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53798",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53798"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53799",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53799"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53800",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53800"
+      },
+      "ratings": [
+        {
+          "severity": "medium"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53801",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53801"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53802",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53802"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-53803",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53803"
+      },
+      "ratings": [
+        {
+          "severity": "high"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:github/bettermirror/rsync"
+        }
+      ]
+    }
+  ]
+}
